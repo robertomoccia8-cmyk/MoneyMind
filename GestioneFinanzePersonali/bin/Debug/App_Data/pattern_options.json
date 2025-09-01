@@ -1,0 +1,22 @@
+{
+  "Necessita": [
+    "Base",
+    "Importante",
+    "Superflua"
+  ],
+  "Frequenza": [
+    "Occasionale",
+    "Ricorrente",
+    "Annuale",
+    "Mensile",
+    "Fissa"
+  ],
+  "Stagionalita": [
+    "Nessuna",
+    "Invernale",
+    "Primaverile",
+    "Estiva",
+    "Autunnale",
+    "Annuale"
+  ]
+}

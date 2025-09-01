@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns4:CBIBdyBkToCstmrStmtReq xmlns="urn:CBI:xsd:CBIHdrTrt.001.07" xmlns:ns2="urn:CBI:xsd:CBIBkToCstmrStmtReqPhyMsg.00.01.02" xmlns:ns3="urn:CBI:xsd:CBIHdrSrv.001.07" xmlns:ns4="urn:CBI:xsd:CBIBdyBkToCstmrStmtReq.00.01.02" xmlns:ns5="urn:CBI:xsd:CBIDlyStmtReqLogMsg.00.01.02" xmlns:ns6="urn:CBI:xsd:CBIBkToCstmrStmtReqLogMsg.00.01.02" xmlns:ns7="urn:CBI:xsd:CBIPrdcStmtReqLogMsg.00.01.02" xmlns:ns8="urn:CBI:xsd:CBIIdyStmtReqLogMsg.00.01.02" xmlns:ns9="urn:CBI:xsd:CBISgnInf.001.04">
+    <ns4:PhyMsgInf>
+        <ns4:PhyMsgTpCd>INF-STMT-01</ns4:PhyMsgTpCd>
+        <ns4:NbOfLogMsg>1</ns4:NbOfLogMsg>
+    </ns4:PhyMsgInf>
+    <ns4:CBIEnvelBkToCstmrStmtReqLogMsg>
+        <ns4:CBIBkToCstmrStmtReqLogMsg>
+            <ns6:CBIDlyStmtReqLogMsg>
+                <ns5:GrpHdr>
+                    <ns5:MsgId>2</ns5:MsgId>
+                    <ns5:CreDtTm>2025-08-26T00:22:23.898+02:00</ns5:CreDtTm>
+                    <ns5:MsgRcpt>
+                        <ns5:Id>
+                            <ns5:OrgId>
+<ns5:Othr/>
+                            </ns5:OrgId>
+                        </ns5:Id>
+                    </ns5:MsgRcpt>
+                    <ns5:AddtlInf>08327</ns5:AddtlInf>
+                </ns5:GrpHdr>
+                <ns5:Stmt>
+                    <ns5:Id>1</ns5:Id>
+                    <ns5:ElctrncSeqNb>1</ns5:ElctrncSeqNb>
+                    <ns5:CreDtTm>2025-08-26T00:22:23.898+02:00</ns5:CreDtTm>
+                    <ns5:Acct>
+                        <ns5:Id>
+                            <ns5:IBAN>IT89B0832722000000000006819</ns5:IBAN>
+                        </ns5:Id>
+                        <ns5:Tp>
+                            <ns5:Cd>CACC</ns5:Cd>
+                        </ns5:Tp>
+                        <ns5:Ccy>EUR</ns5:Ccy>
+                        <ns5:Ownr>
+                            <ns5:Nm>CONTO CORRENTE</ns5:Nm>
+                        </ns5:Ownr>
+                        <ns5:Svcr>
+                            <ns5:FinInstnId>
+<ns5:ClrSysMmbId>
+    <ns5:MmbId>08327</ns5:MmbId>
+</ns5:ClrSysMmbId>
+                            </ns5:FinInstnId>
+                        </ns5:Svcr>
+                    </ns5:Acct>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">7899.85</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-25+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>OPBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">7900.45</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-25+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLAV</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">7899.85</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-25+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:TxsSummry>
+                        <ns5:TtlNtries>
+                            <ns5:NbOfNtries>1</ns5:NbOfNtries>
+                            <ns5:Sum>0.6</ns5:Sum>
+                            <ns5:TtlNetNtryAmt>0.6</ns5:TtlNetNtryAmt>
+                            <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        </ns5:TtlNtries>
+                    </ns5:TxsSummry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>1</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">0.6</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-25+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>241320406830001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 20.08.25 08:40 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                </ns5:Stmt>
+                <ns5:Stmt>
+                    <ns5:Id>3</ns5:Id>
+                    <ns5:ElctrncSeqNb>2</ns5:ElctrncSeqNb>
+                    <ns5:CreDtTm>2025-08-26T00:22:23.898+02:00</ns5:CreDtTm>
+                    <ns5:Acct>
+                        <ns5:Id>
+                            <ns5:IBAN>IT89B0832722000000000006819</ns5:IBAN>
+                        </ns5:Id>
+                        <ns5:Tp>
+                            <ns5:Cd>CACC</ns5:Cd>
+                        </ns5:Tp>
+                        <ns5:Ccy>EUR</ns5:Ccy>
+                        <ns5:Ownr>
+                            <ns5:Nm>CONTO CORRENTE</ns5:Nm>
+                        </ns5:Ownr>
+                        <ns5:Svcr>
+                            <ns5:FinInstnId>
+<ns5:ClrSysMmbId>
+    <ns5:MmbId>08327</ns5:MmbId>
+</ns5:ClrSysMmbId>
+                            </ns5:FinInstnId>
+                        </ns5:Svcr>
+                    </ns5:Acct>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">7900.45</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>OPBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5005.88</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLAV</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">7900.45</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:TxsSummry>
+                        <ns5:TtlNtries>
+                            <ns5:NbOfNtries>3</ns5:NbOfNtries>
+                            <ns5:Sum>2899.37</ns5:Sum>
+                            <ns5:TtlNetNtryAmt>2894.57</ns5:TtlNetNtryAmt>
+                            <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        </ns5:TtlNtries>
+                    </ns5:TxsSummry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>1</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">1.8</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>241005894290001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>16//61</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>DEL 20.08.25 08:38       Prelievo su altra Banca  CARTA 083271201250</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Commissioni prelievo bancomat su a DEL 20.08.25 08:38 Prelievo su altra Banca CARTA 083271201250</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>2</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">0.6</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-19+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>241008312500001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>Del 19.08.25 09:35 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 19.08.25 09:35 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>3</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">2896.97</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-22+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>241019618350002</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>27//00</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>*2025-08-22*MINISTERO DELL INTERNO  STIPENDIO RATA CONTINUATIVA MESE DI AGOSTO 2025</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Emolumenti *2025-08-22*MINISTERO DELL INTERNO STIPENDIO RATA CONTINUATIVA MESE DI AGOSTO 2025</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                </ns5:Stmt>
+                <ns5:Stmt>
+                    <ns5:Id>3</ns5:Id>
+                    <ns5:ElctrncSeqNb>3</ns5:ElctrncSeqNb>
+                    <ns5:CreDtTm>2025-08-26T00:22:23.898+02:00</ns5:CreDtTm>
+                    <ns5:Acct>
+                        <ns5:Id>
+                            <ns5:IBAN>IT89B0832722000000000006819</ns5:IBAN>
+                        </ns5:Id>
+                        <ns5:Tp>
+                            <ns5:Cd>CACC</ns5:Cd>
+                        </ns5:Tp>
+                        <ns5:Ccy>EUR</ns5:Ccy>
+                        <ns5:Ownr>
+                            <ns5:Nm>CONTO CORRENTE</ns5:Nm>
+                        </ns5:Ownr>
+                        <ns5:Svcr>
+                            <ns5:FinInstnId>
+<ns5:ClrSysMmbId>
+    <ns5:MmbId>08327</ns5:MmbId>
+</ns5:ClrSysMmbId>
+                            </ns5:FinInstnId>
+                        </ns5:Svcr>
+                    </ns5:Acct>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5005.88</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>OPBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5107.68</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLAV</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5005.88</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:TxsSummry>
+                        <ns5:TtlNtries>
+                            <ns5:NbOfNtries>3</ns5:NbOfNtries>
+                            <ns5:Sum>101.8</ns5:Sum>
+                            <ns5:TtlNetNtryAmt>101.8</ns5:TtlNetNtryAmt>
+                            <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        </ns5:TtlNtries>
+                    </ns5:TxsSummry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>1</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">1.2</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-18+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>240910275140001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>Del 18.08.25 11:53 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 18.08.25 11:53 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>2</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">0.6</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-18+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>240910275160001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>Del 18.08.25 09:38 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 18.08.25 09:38 Carta *1250 MENSA POLO TUSCOLANO ROMA ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>3</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">100</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-21+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>240921704130001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>91//00</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>DEL 20/08/25 08:38       CARTA 083271201250-0     Codice ATM: 5218</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Prelevamento bancomat su altra ban DEL 20/08/25 08:38 CARTA 083271201250-0 Codice ATM: 5218</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                </ns5:Stmt>
+                <ns5:Stmt>
+                    <ns5:Id>2</ns5:Id>
+                    <ns5:ElctrncSeqNb>4</ns5:ElctrncSeqNb>
+                    <ns5:CreDtTm>2025-08-26T00:22:23.898+02:00</ns5:CreDtTm>
+                    <ns5:Acct>
+                        <ns5:Id>
+                            <ns5:IBAN>IT89B0832722000000000006819</ns5:IBAN>
+                        </ns5:Id>
+                        <ns5:Tp>
+                            <ns5:Cd>CACC</ns5:Cd>
+                        </ns5:Tp>
+                        <ns5:Ccy>EUR</ns5:Ccy>
+                        <ns5:Ownr>
+                            <ns5:Nm>CONTO CORRENTE</ns5:Nm>
+                        </ns5:Ownr>
+                        <ns5:Svcr>
+                            <ns5:FinInstnId>
+<ns5:ClrSysMmbId>
+    <ns5:MmbId>08327</ns5:MmbId>
+</ns5:ClrSysMmbId>
+                            </ns5:FinInstnId>
+                        </ns5:Svcr>
+                    </ns5:Acct>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5107.68</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>OPBD</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5220.08</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:Bal>
+                        <ns5:Tp>
+                            <ns5:CdOrPrtry>
+<ns5:Cd>CLAV</ns5:Cd>
+                            </ns5:CdOrPrtry>
+                        </ns5:Tp>
+                        <ns5:Amt Ccy="EUR">5107.68</ns5:Amt>
+                        <ns5:CdtDbtInd>CRDT</ns5:CdtDbtInd>
+                        <ns5:Dt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:Dt>
+                    </ns5:Bal>
+                    <ns5:TxsSummry>
+                        <ns5:TtlNtries>
+                            <ns5:NbOfNtries>2</ns5:NbOfNtries>
+                            <ns5:Sum>112.4</ns5:Sum>
+                            <ns5:TtlNetNtryAmt>112.4</ns5:TtlNetNtryAmt>
+                            <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        </ns5:TtlNtries>
+                    </ns5:TxsSummry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>1</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">79.6</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-17+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>240815127950001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>Del 17.08.25 14:34 Carta *1250 IZUMA MARINO ITA</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 17.08.25 14:34 Carta *1250 IZUMA MARINO ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                    <ns5:Ntry>
+                        <ns5:NtryRef>2</ns5:NtryRef>
+                        <ns5:Amt Ccy="EUR">32.8</ns5:Amt>
+                        <ns5:CdtDbtInd>DBIT</ns5:CdtDbtInd>
+                        <ns5:Sts>BOOK</ns5:Sts>
+                        <ns5:BookgDt>
+                            <ns5:Dt>2025-08-20+02:00</ns5:Dt>
+                        </ns5:BookgDt>
+                        <ns5:ValDt>
+                            <ns5:Dt>2025-08-17+02:00</ns5:Dt>
+                        </ns5:ValDt>
+                        <ns5:AcctSvcrRef>240815127980001</ns5:AcctSvcrRef>
+                        <ns5:BkTxCd>
+                            <ns5:Prtry>
+<ns5:Cd>43//10</ns5:Cd>
+<ns5:Issr>CBI</ns5:Issr>
+                            </ns5:Prtry>
+                        </ns5:BkTxCd>
+                        <ns5:NtryDtls>
+                            <ns5:TxDtls>
+<ns5:RltdPties>
+    <ns5:Cdtr>
+        <ns5:Nm>Del 17.08.25 09:50 Carta *1250 RISTORANTE I QUADRI CASTEL GANDOL ITA</ns5:Nm>
+    </ns5:Cdtr>
+</ns5:RltdPties>
+<ns5:AddtlTxInf>Operazione POS Eurozona Del 17.08.25 09:50 Carta *1250 RISTORANTE I QUADRI CASTEL GANDOL ITA</ns5:AddtlTxInf>
+                            </ns5:TxDtls>
+                        </ns5:NtryDtls>
+                    </ns5:Ntry>
+                </ns5:Stmt>
+            </ns6:CBIDlyStmtReqLogMsg>
+        </ns4:CBIBkToCstmrStmtReqLogMsg>
+    </ns4:CBIEnvelBkToCstmrStmtReqLogMsg>
+</ns4:CBIBdyBkToCstmrStmtReq>

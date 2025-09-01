@@ -1,0 +1,41 @@
+ID: 52 | Parola Pattern usata: FIUMICINO
+ID: 53 | Parola Pattern usata: FIUMICINO
+ID: 54 | Parola Pattern usata: FIUMICINO
+ID: 148 | Parola Pattern usata: FIUMICINO
+ID: 149 | Parola Pattern usata: FIUMICINO
+ID: 659 | Parola Pattern usata: BONIFICO
+ID: 662 | Parola Pattern usata: FIUMICINO
+ID: 663 | Parola Pattern usata: FIUMICINO
+ID: 664 | Parola Pattern usata: FIUMICINO
+ID: 679 | Parola Pattern usata: NO MATCH
+ID: 765 | Parola Pattern usata: NO MATCH
+ID: 909 | Parola Pattern usata: NO MATCH
+ID: 912 | Parola Pattern usata: NO MATCH
+ID: 913 | Parola Pattern usata: NO MATCH
+ID: 915 | Parola Pattern usata: NO MATCH
+ID: 916 | Parola Pattern usata: NO MATCH
+ID: 924 | Parola Pattern usata: NO MATCH
+ID: 679 | Parola Pattern usata: NO MATCH
+ID: 765 | Parola Pattern usata: NO MATCH
+ID: 909 | Parola Pattern usata: NO MATCH
+ID: 912 | Parola Pattern usata: NO MATCH
+ID: 913 | Parola Pattern usata: NO MATCH
+ID: 915 | Parola Pattern usata: NO MATCH
+ID: 916 | Parola Pattern usata: NO MATCH
+ID: 924 | Parola Pattern usata: NO MATCH
+ID: 939 | Parola Pattern usata: BONIFICO
+ID: 940 | Parola Pattern usata: ANTICIPO
+ID: 941 | Parola Pattern usata: LA LAMPARA
+ID: 942 | Parola Pattern usata: SEPA
+ID: 679 | Parola Pattern usata: NO MATCH
+ID: 765 | Parola Pattern usata: NO MATCH
+ID: 909 | Parola Pattern usata: NO MATCH
+ID: 912 | Parola Pattern usata: NO MATCH
+ID: 913 | Parola Pattern usata: NO MATCH
+ID: 915 | Parola Pattern usata: NO MATCH
+ID: 916 | Parola Pattern usata: NO MATCH
+ID: 924 | Parola Pattern usata: NO MATCH
+ID: 943 | Parola Pattern usata: BONIFICO
+ID: 944 | Parola Pattern usata: ANTICIPO
+ID: 945 | Parola Pattern usata: LA LAMPARA
+ID: 946 | Parola Pattern usata: SEPA

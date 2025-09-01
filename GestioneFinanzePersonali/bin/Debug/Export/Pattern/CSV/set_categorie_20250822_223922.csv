@@ -1,0 +1,340 @@
+﻿ID;PAROLA;MacroCategoria;Categoria;Necessita;Frequenza;Stagionalita;Fonte;Peso;NumeroPattern;NumeroTransazioni;UltimoUtilizzo
+366;ARIDA CAFFE;Alimentari;Bar;Utile;Occasionale;Tutto l'anno;Migrazione;77;13;1;06/05/2025
+367;CAFFETTERIA;Alimentari;Bar;Utile;Occasionale;Tutto l'anno;Migrazione;75;13;1;02/04/2025
+368;FAUST SATYRUS;Alimentari;Bar;Utile;Occasionale;Tutto l'anno;Migrazione;70;13;1;22/06/2024
+369;FRAGISKOS;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;72;13;1;21/07/2024
+370;IDEA KAFE;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;77;13;1;22/07/2024
+371;KATSANIS;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;73;13;1;24/07/2024
+372;LA BOTTEGA DEL CAFFE';Alimentari;Bar;Utile;Occasionale;Tutto l'anno;Migrazione;78;13;1;14/09/2024
+373;MOYSTAKIS;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;75;13;1;24/07/2024
+374;MY COFFEE;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;78;13;1;21/07/2024
+375;OPEC;Alimentari;Bar;Utile;Occasionale;Tutto l'anno;Migrazione;70;13;1;22/06/2025
+376;RELAX;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;77;13;1;22/07/2024
+377;SKOULATOS;Alimentari;Bar;Utile;Occasionale;Estiva;Migrazione;75;13;1;22/07/2024
+378;STARBUCKS;Alimentari;Bar;Voluttuario;Occasionale;Estera;Migrazione;95;13;1;25/04/2025
+379;A BRASILEIRA;Alimentari;Caffetteria;Voluttuario;Occasionale;Estiva;Migrazione;70;1;1;20/12/2024
+380;ANAGNINA FOOD KIOSK;Alimentari;Chiosco;Voluttuario;Occasionale;Tutto l'anno;Migrazione;79;1;1;18/05/2025
+381;ROMANA FLORA;Alimentari;Fiori;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;1;14/02/2025
+382;FRUTTERIA;Alimentari;Frutta/Orto;Essenziale;Occasionale;Tutto l'anno;Migrazione;90;2;10;14/06/2025
+383;IL MONDO DELLA FRUTTA;Alimentari;Frutta/Orto;Essenziale;Occasionale;Tutto l'anno;Migrazione;78;2;1;15/02/2025
+384;AMI POKE';Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;9;1;04/03/2025
+385;AMOR DI GUSTO;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78;9;1;24/05/2025
+386;ARGU;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;9;11;09/06/2025
+387;BISTROT;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82;9;2;02/03/2025
+388;BOLOGNA FOOD GALLERY;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;9;1;13/06/2025
+389;CR ITALY;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;9;1;04/03/2025
+390;FARIN KITCHEN;Alimentari;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;9;1;03/04/2025
+391;FATIFER;Alimentari;Gastronomia;Utile;Occasionale;Tutto l'anno;Migrazione;75;9;1;14/06/2025
+392;POLLERIA;Alimentari;Gastronomia;Utile;Occasionale;Tutto l'anno;Migrazione;75;9;2;06/05/2025
+393;GELARMONY;Alimentari;Gelateria;Utile;Occasionale;Tutto l'anno;Migrazione;80;2;1;06/04/2025
+394;I NOBILI GELATERIA;Alimentari;Gelateria;Utile;Occasionale;Estiva;Migrazione;81;2;1;23/03/2025
+395;SCAGORA GOURMET;Alimentari;Gourmet;Voluttuario;Occasionale;Estera;Migrazione;78;1;1;28/09/2024
+396;TRUTH;Alimentari;Healthy;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;4;15/06/2025
+397;CASEIFICIO GIUSTI;Alimentari;Latticini;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;2;3;30/03/2025
+398;CASEIFICIO LA PAGLIARA;Alimentari;Latticini;Essenziale;Occasionale;Tutto l'anno;Migrazione;75;2;1;27/11/2024
+399;LAVANDERIA DM;Alimentari;Lavanderia;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;1;04/07/2025
+400;IL MANNARINO;Alimentari;Macelleria;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;2;1;12/06/2025
+401;NORCINERIA LA VILLETTA;Alimentari;Macelleria;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;2;3;12/04/2025
+402;MENSA POLO;Alimentari;Mensa;Essenziale;Occasionale;Tutto l'anno;Migrazione;90;2;17;27/06/2025
+403;MENSA POLO TUSCOLANO;Alimentari;Mensa;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;2;17;27/06/2025
+404;IL TIGELLINO;Alimentari;Panetteria;Utile;Occasionale;Tutto l'anno;Migrazione;75;4;1;11/06/2025
+405;LA FAMILLE;Alimentari;Panetteria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;4;2;28/05/2025
+406;LE PALME;Alimentari;Panetteria;Essenziale;Occasionale;Tutto l'anno;Migrazione;75;4;2;03/05/2025
+407;PAUL1;Alimentari;Panetteria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73;4;1;25/05/2025
+408;PAUSE SANDWICH;Alimentari;Panini/Sandwich;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;80;1;1;27/05/2025
+409;CARRINHO CONFEITARIA;Alimentari;Pasticceria;Essenziale;Occasionale;Estiva;Migrazione;70;5;1;20/12/2024
+410;CORNETTOLANDIA;Alimentari;Pasticceria;Utile;Occasionale;Tutto l'anno;Migrazione;80;5;1;02/07/2024
+411;LA PROMENADE;Alimentari;Pasticceria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;5;1;26/05/2025
+412;OBERLAA KONDITOREI;Alimentari;Pasticceria;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;88;5;1;27/04/2025
+413;PASTEIS DE BELEM;Alimentari;Pasticceria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90;5;1;19/12/2024
+414;PESCE & P.;Alimentari;Pescheria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82;1;1;09/03/2025
+415;ANGELO PEZZELLA;Alimentari;Pizzeria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90;2;1;30/12/2024
+416;PAPA POSTO;Alimentari;Pizzeria;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;2;1;28/05/2025
+417;RAMEN TON BOL;Alimentari;Ramen;Voluttuario;Occasionale;Estera;Migrazione;80;1;1;26/05/2025
+418;BAR;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;60;50;58;12/07/2025
+419;BELLOTA-BELLOTA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;30/05/2025
+420;BLANCO;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;50;1;14/07/2024
+421;BUDDHA SMILE;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;88;50;4;01/12/2024
+422;BURGER KING;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;95;50;6;04/08/2025
+423;CAMAL;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;8;07/03/2025
+424;CHALET LA DELIZIA;Alimentari;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;75;50;1;12/12/2024
+425;CIBIVACCO;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;50;1;16/02/2025
+426;Country Club di Gu Calcata;Alimentari;Ristorazione;Utile;Occasionale;Tutto l'anno;Migrazione;100;50;1;23/11/2024
+427;DA AGNESE;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82;50;3;09/05/2025
+428;DA GIGI;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;50;1;16/02/2025
+429;DA NOI;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;83;50;1;10/07/2024
+430;DA PAOLO ALLA CAPANNIN;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;30/11/2024
+431;DELIVEROO;Alimentari;Ristorazione;;;;Migrazione;90;50;0;Mai utilizzato
+432;DONNA CIRA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82;50;1;31/01/2025
+433;GLOVO;Alimentari;Ristorazione;;;;Migrazione;90;50;0;Mai utilizzato
+434;GUSTAMI DI IOVANE MARC;Alimentari;Ristorazione;Voluttuario;Occasionale;Invernale;Migrazione;90;50;3;24/12/2024
+435;HELLO SAILOR;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;50;1;11/10/2024
+436;IZUMA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;50;2;16/04/2025
+437;KALAPA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78;50;2;11/01/2025
+438;KELSEN IM PARLAMENT;Alimentari;Ristorazione;Culturale;Occasionale;Estera;Migrazione;75;50;1;26/04/2025
+439;KIYOMI;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;50;1;11/07/2024
+440;KOLETSA MARIA;Alimentari;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;70;50;1;25/07/2024
+441;KRAM;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;50;1;10/05/2025
+442;LA LAMPARA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;50;1;08/03/2025
+443;LA PASTERIA;Alimentari;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;75;50;1;28/07/2024
+444;LA PIAZZA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;77;50;1;11/06/2025
+445;LA SOLITA ZUPPA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;07/05/2025
+446;LI VOLSI;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;50;1;03/07/2024
+447;MARIA JESUS PINHEIRO;Alimentari;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;70;50;1;19/12/2024
+448;MCDONALD;Alimentari;Ristorazione;;;;Migrazione;95;50;0;Mai utilizzato
+449;MESSICO E NUVOLE;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;30/07/2024
+450;MON AMI';Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;50;1;21/03/2025
+451;MYCHEF;Alimentari;Ristorazione;Utile;Occasionale;Viaggio;Migrazione;80;50;1;05/01/2025
+452;OPIA SRL;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;100;50;1;12/10/2024
+453;OSTERIA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;95;50;4;19/06/2025
+454;PEGAL A GOSTO;Alimentari;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;75;50;1;19/12/2024
+455;PEPPE O RUSSO;Alimentari;Ristorazione;Essenziale;Occasionale;Tutto l'anno;Migrazione;75;50;1;18/06/2025
+456;PIZZERIA;Alimentari;Ristorazione;;;;Migrazione;92;50;0;Mai utilizzato
+457;QUINTO;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;50;1;30/11/2024
+458;RISTORANTE;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;97;50;9;01/07/2025
+459;SDP MAGLIANO;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;50;1;16/02/2025
+460;SEVEN;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;50;1;10/05/2025
+461;SUSHI GOOD;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;13/12/2024
+462;TABACCHERIA FILIU';Alimentari;Ristorazione;Utile;Occasionale;Tutto l'anno;Migrazione;70;50;1;17/06/2025
+463;TABERNA DA BAIXA;Alimentari;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;75;50;1;18/12/2024
+464;TAVERNA;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90;50;1;07/07/2025
+465;THE BASE;Alimentari;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;50;1;03/07/2024
+466;UBER EATS;Alimentari;Ristorazione;;;;Migrazione;90;50;0;Mai utilizzato
+467;VAPIANO;Alimentari;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;88;50;2;25/04/2025
+468;CARREFOUR;Alimentari;Spesa quotidiana;;;;Manuale;80;19;0;Mai utilizzato
+469;CASA OZ;Alimentari;Spesa quotidiana;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;19;1;02/03/2025
+470;CONAD;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Essenziale;Manuale;90;19;2;18/06/2025
+471;COOP;Alimentari;Spesa quotidiana;Neutrale;Fissa;Tutto l'anno;Manuale;90;19;14;18/08/2025
+472;CRAI;Alimentari;Spesa quotidiana;;;;Migrazione;85;19;0;Mai utilizzato
+473;EMERALD'S;Alimentari;Spesa quotidiana;Essenziale;Occasionale;Tutto l'anno;Migrazione;75;19;1;04/01/2025
+474;ESSELUNGA;Alimentari;Spesa quotidiana;;;;Manuale;90;19;0;Mai utilizzato
+475;EUROSPAR;Alimentari;Spesa quotidiana;;;;Migrazione;85;19;0;Mai utilizzato
+476;FOOD SERVICE;Alimentari;Spesa quotidiana;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;19;32;16/12/2024
+477;IPERCOOP;Alimentari;Spesa quotidiana;;;;Migrazione;85;19;0;Mai utilizzato
+478;LIDL;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;97;19;9;04/08/2025
+479;PANIFICIO;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;90;19;3;22/03/2025
+480;PANORAMA;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;95;19;11;04/07/2025
+481;PENNY;Alimentari;Spesa quotidiana;;;;Migrazione;80;19;0;Mai utilizzato
+482;PEWEX;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;97;19;51;25/06/2025
+483;SCOMODO;Alimentari;Spesa quotidiana;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;19;2;01/08/2024
+484;SPESA;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80;19;2;01/07/2025
+485;SUPERMERCATI;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Tutto l'anno;Migrazione;95;19;13;25/06/2025
+486;SUPERMERCATO TOP;Alimentari;Spesa quotidiana;Essenziale;Ricorrente;Essenziale;Migrazione;90;19;1;02/06/2025
+487;KONTOS SOUVLAKI;Alimentari;Spiedini;Voluttuario;Occasionale;Estiva;Migrazione;78;1;1;22/07/2024
+488;BI BIM BAP;Alimentari;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73;5;1;25/05/2025
+489;EMPANADAS MBQ;Alimentari;Street Food;Voluttuario;Occasionale;Estiva;Migrazione;75;5;1;19/12/2024
+490;HAPPY FOOD;Alimentari;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;5;1;19/12/2024
+491;TREDICINE DINO;Alimentari;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82;5;1;30/12/2024
+492;ZUM GOLDENEN WUERSTL;Alimentari;Street Food;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;85;5;1;27/04/2025
+493;BAZAAR;Alimentari;Supermercato;Essenziale;Occasionale;Estiva;Migrazione;75;10;2;15/07/2025
+494;CRF LILLE;Alimentari;Supermercato;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78;10;1;27/05/2025
+495;DESYDERIO;Alimentari;Supermercato;Utile;Occasionale;Tutto l'anno;Migrazione;75;10;1;07/12/2024
+496;HAVANA;Alimentari;Supermercato;Voluttuario;Occasionale;Estiva;Migrazione;75;10;8;01/05/2025
+497;RELAY;Alimentari;Supermercato;Essenziale;Occasionale;Viaggio;Migrazione;70;10;1;25/05/2025
+498;SPAR;Alimentari;Supermercato;Essenziale;Occasionale;Viaggio;Migrazione;82;10;2;05/08/2025
+499;SUNSET BEACH;Alimentari;Supermercato;Utile;Occasionale;Estiva;Migrazione;75;10;2;03/08/2024
+500;SUPER MARKET BAZAAR;Alimentari;Supermercato;Voluttuario;Occasionale;Estiva;Migrazione;78;10;1;15/07/2025
+501;SUPERMERCATO;Alimentari;Supermercato;Essenziale;Ricorrente;Essenziale;Manuale;100;10;3;18/06/2025
+502;TEDI;Alimentari;Supermercato;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80;10;2;04/07/2025
+503;EUROSURGELATI;Alimentari;Surgelati;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;1;1;24/06/2025
+504;YO FUSION;Alimentari;Sushi;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78;1;1;22/05/2025
+505;AUTOGRILL;Auto;Autogrill;Voluttuario;Occasionale;Viaggio;Migrazione;82;1;4;07/07/2025
+506;AGIP;Auto;Carburante;;;;Manuale;100;11;0;Mai utilizzato
+507;BENZINA;Auto;Carburante;;;;Manuale;100;11;0;Mai utilizzato
+508;EASY SERVICE;Auto;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;90;11;18;11/08/2025
+509;ENERPETROLI;Auto;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;11;2;05/01/2025
+510;ENI;Auto;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;100;11;10;10/08/2025
+511;FIAMMA;Auto;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;11;1;31/05/2025
+512;IP;Auto;Carburante;Essenziale;Ricorrente;Tutto l'anno;Migrazione;85;11;56;24/07/2025
+513;MY OILVIA;Auto;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;11;1;20/09/2024
+514;Q8;Auto;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;100;11;6;25/06/2025
+515;SHELL;Auto;Carburante;;;;Manuale;100;11;0;Mai utilizzato
+516;TAMOIL;Auto;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;11;1;08/09/2024
+517;C.M. MOTORI;Auto;Manutenzione;Utile;Occasionale;Tutto l'anno;Migrazione;85;2;1;28/04/2025
+518;CAR SHOP;Auto;Manutenzione;Utile;Occasionale;Tutto l'anno;Migrazione;72;2;1;28/04/2025
+519;PARCHEGGIO;Auto;Parcheggio;Utile;Occasionale;Tutto l'anno;Migrazione;80;3;2;05/01/2025
+520;PARK AND FLY;Auto;Parcheggio;Neutrale;Occasionale;Viaggio;Migrazione;80;3;3;07/07/2025
+521;SOSTA;Auto;Parcheggio;;;;Migrazione;70;3;0;Mai utilizzato
+522;ASPIT NOLA;Auto;Pedaggio;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;2;1;17/08/2024
+523;TELEPASS;Auto;Pedaggio;Utile;Fissa;Tutto l'anno;Migrazione;95;2;14;31/07/2025
+524;45575 NOLA;Banca;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70;3;1;30/03/2025
+525;PV5587;Banca;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70;3;1;21/12/2024
+526;PV7264;Banca;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70;3;1;20/08/2024
+527;CREDITO COOPERATIVO;Banca;Carte di Pagamento;Neutrale;Fissa;Tutto l'anno;Migrazione;90;1;14;18/08/2025
+528;AUTOMOBILE;Banca;Commissioni;Utile;Annuale;Tutto l'anno;Migrazione;90;7;2;13/12/2024
+529;BANCOMAT ESTERO;Banca;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;90;7;4;15/07/2025
+530;COMMISSIONI;Banca;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;7;51;30/07/2025
+531;IMPOSTA;Banca;Commissioni;Neutrale;Annuale;Tutto l'anno;Migrazione;85;7;5;30/06/2025
+532;Imposte e Tasse;Banca;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;85;7;3;26/05/2025
+533;PRELIEVO;Banca;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;75;7;22;30/07/2025
+534;SEPA;Banca;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;7;91;18/08/2025
+535;INTERESSI;Banca;Interessi;Neutrale;Annuale;Tutto l'anno;Migrazione;85;1;5;30/06/2025
+536;ATM;Banca;Prelievo;Neutrale;Occasionale;Tutto l'anno;Migrazione;85;5;23;30/07/2025
+537;FALIRAKI;Banca;Prelievo;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;5;1;15/07/2025
+538;FIUMICINO;Banca;Prelievo;Voluttuario;Occasionale;Estiva;Migrazione;80;5;18;07/07/2025
+539;NAPOLI;Banca;Prelievo;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;5;15;04/08/2025
+540;PRELEVAMENTO;Banca;Prelievo;Neutrale;Occasionale;Tutto l'anno;Migrazione;85;5;23;30/07/2025
+541;VERSAMENTO;Banca;Servizi;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;1;2;15/05/2025
+542;STORNO;Banca;Storni;Neutrale;Occasionale;Tutto l'anno;Migrazione;85;1;3;22/12/2024
+543;CASALANDIA;Casa;Accessori casa;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;3;06/01/2025
+544;ZERO FASHION;Casa;Arredamento;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;1;06/07/2025
+545;ASSICURAZIONE;Casa;Assicurazioni;Essenziale;Annuale;Tutto l'anno;Migrazione;90;4;6;26/06/2025
+546;BARCA;Casa;Assicurazioni;Essenziale;Ricorrente;Tutto l'anno;Migrazione;92;4;10;01/07/2025
+547;CHARTER;Casa;Assicurazioni;Essenziale;Annuale;Estiva;Migrazione;92;4;1;25/06/2025
+548;QUOTA ASSICURAZIONE;Casa;Assicurazioni;Essenziale;Annuale;Tutto l'anno;Migrazione;90;4;1;25/06/2025
+549;EDILBRIKO;Casa;Brico;Utile;Occasionale;Tutto l'anno;Migrazione;72;1;1;21/03/2025
+550;CAPSULE E CIALDE;Casa;Cialde Caffè;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;2;15/03/2025
+551;ACCONTO;Casa;Condominio;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;4;1;05/09/2024
+552;MEDIAZIONE;Casa;Condominio;Essenziale;Annuale;Tutto l'anno;Migrazione;90;4;4;24/06/2025
+553;QUOTE;Casa;Condominio;Essenziale;Annuale;Tutto l'anno;Migrazione;90;4;4;24/07/2025
+554;RATA;Casa;Condominio;Essenziale;Ricorrente;Tutto l'anno;Migrazione;92;4;49;07/08/2025
+555;CASALINGHI SU LIAI;Casa;Cura;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;1;11/10/2024
+556;EDILMARKET;Casa;Edilizia;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;5;28/04/2025
+557;MUTUO;Casa;Finanziamenti;Essenziale;Fissa;Tutto l'anno;Migrazione;92;1;14;07/08/2025
+558;AMAZON PRIME;Casa;Servizi;;;;Migrazione;90;4;0;Mai utilizzato
+559;LAVANDERIA;Casa;Servizi;Utile;Occasionale;Tutto l'anno;Migrazione;75;4;1;04/07/2025
+560;NETFLIX;Casa;Servizi;Voluttuario;Fissa;Tutto l'anno;Migrazione;95;4;8;01/08/2025
+561;SPOTIFY;Casa;Servizi;;;;Migrazione;95;4;0;Mai utilizzato
+562;EUROHOME;Casa;Shopping;Utile;Occasionale;Tutto l'anno;Migrazione;70;2;1;28/07/2024
+563;IKEA;Casa;Shopping;;;;Migrazione;95;2;0;Mai utilizzato
+564;FASTWEB;Casa;Utenze;;;;Migrazione;95;4;0;Mai utilizzato
+565;TIM;Casa;Utenze;Essenziale;Fissa;Tutto l'anno;Migrazione;95;4;3;13/06/2025
+566;VODAFONE;Casa;Utenze;Essenziale;Fissa;Tutto l'anno;Migrazione;95;4;12;11/08/2025
+567;WIND;Casa;Utenze;;;;Migrazione;95;4;0;Mai utilizzato
+568;VIAGGIO;Entrate;Bonifico;Voluttuario;Occasionale;Estiva;Migrazione;90;1;12;14/08/2025
+569;ANTICIPO;Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90;5;6;19/06/2025
+570;Emolumenti;Entrate;Lavoro;Essenziale;Ricorrente;Tutto l'anno;Migrazione;100;5;16;23/07/2025
+571;MIN.INT.SEGR.DIP.TO PUBB.SICU.;Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;92;5;7;19/06/2025
+572;MISSIONE;Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90;5;3;22/01/2025
+573;SALDI MISS;Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90;5;1;31/10/2024
+574;FARMACIA;Farmacia;Salute;Essenziale;Occasionale;Essenziale;Manuale;100;1;5;25/05/2025
+575;BONIFICO;Finanze;Bonifici;Neutrale;Occasionale;Tutto l'anno;Migrazione;70;1;75;14/08/2025
+576;TIME FITNESS;Fitness;Palestra;Essenziale;Fissa;Tutto l'anno;Migrazione;88;1;2;03/06/2025
+577;ARTE E VINO;Gastronomia;Enoteca;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;1;1;21/10/2024
+578;MI' NDUJO;Gastronomia;Tipico Calabrese;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70;1;1;17/05/2025
+579;RICA GEST;Gestione Immobili;Affittacamere;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;1;13/04/2025
+580;CINEMA;Intrattenimento;Cinema;;;;Migrazione;80;1;0;Mai utilizzato
+581;PALESTRA;Intrattenimento;Palestra;;;;Migrazione;80;1;0;Mai utilizzato
+582;MAKERE;Noleggio;Auto;Utile;Occasionale;Estiva;Migrazione;73;2;1;17/06/2025
+583;Y.R.G.;Noleggio;Auto;Utile;Occasionale;Estiva;Migrazione;70;2;1;24/08/2024
+584;LIS PAY;Pagamenti;E-Wallet;Neutrale;Occasionale;Tutto l'anno;Migrazione;80;1;2;22/04/2025
+585;FAST PAY;Pagamento;Pedaggio;Utile;Fissa;Tutto l'anno;Migrazione;80;1;1;22/02/2025
+586;SAPORE DI MARE;Ristoranti;Pescheria;Essenziale;Occasionale;Tutto l'anno;Migrazione;80;1;1;13/10/2024
+587;BARRIOLATINO;Ristorazione;Ristorante;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;8;07/02/2025
+588;ALBAMEDICA;Salute;Clinica;Essenziale;Occasionale;Tutto l'anno;Migrazione;75;1;1;17/09/2024
+589;ANAGNINA HFB ECO;Salute;Farmacia;Essenziale;Occasionale;Tutto l'anno;Migrazione;79;1;2;18/05/2025
+590;NUOVA SIDAP;Servizi;Industria;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;1;13/10/2024
+591;SHOP & GO;Servizi;Pagamenti Digitali;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75;2;1;07/12/2024
+592;SUMUP;Servizi;Pagamenti Digitali;Utile;Occasionale;Tutto l'anno;Migrazione;90;2;19;10/08/2025
+593;DECATHLON;Shopping;Abbigliamento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90;4;4;22/02/2025
+594;LE SOYEUX;Shopping;Abbigliamento;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;75;4;1;27/05/2025
+595;PRIMARK;Shopping;Abbigliamento;Voluttuario;Occasionale;Saldi;Migrazione;80;4;1;07/12/2024
+596;ZARA;Shopping;Abbigliamento;Voluttuario;Occasionale;Saldi;Migrazione;85;4;4;22/12/2024
+597;CRF MRK;Shopping;Accessori;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;1;09/07/2024
+598;AMAZON;Shopping;Amazon;Voluttuario;Occasionale;Tutto l'anno;Manuale;90;1;1;25/10/2024
+599;COSMO SPA;Shopping;Cura Persona;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;2;23/05/2025
+600;EURONICS;Shopping;Elettronica;Utile;Occasionale;Tutto l'anno;Migrazione;79;1;2;17/06/2025
+601;BRITANNIA;Shopping;Fitness;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;1;16/08/2024
+602;FACTO2;Shopping;Forniture;Utile;Occasionale;Tutto l'anno;Migrazione;80;2;1;30/05/2025
+603;PV5649;Shopping;Forniture;Utile;Occasionale;Tutto l'anno;Migrazione;75;2;2;07/12/2024
+604;MATCH;Shopping;Libreria;Utile;Occasionale;Viaggio;Migrazione;77;2;1;29/05/2025
+605;MONDADORI;Shopping;Libreria;Utile;Occasionale;Tutto l'anno;Migrazione;78;2;1;18/05/2025
+606;LISMARKETING;Shopping;Marketing Online;Utile;Occasionale;Estera;Migrazione;70;1;1;18/12/2024
+607;S FACTORY;Shopping;Moda;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;1;22/12/2024
+608;ARCA;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;80;2;12;01/07/2025
+609;GRUPPO NEGOZI;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;75;2;1;11/06/2025
+610;AMAZON PAYMENTS;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;94;5;1;25/10/2024
+611;IDEASVAPOSR;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;5;1;03/09/2024
+612;PAYPAL;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;88;5;33;12/08/2025
+613;SHEIN;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;97;5;2;25/01/2025
+614;SVAPODREAM;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;5;1;04/09/2024
+615;LUX PRODUZIONI;Shopping;Produzione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;1;08/05/2025
+616;C.I.T.;Shopping;Servizi aziendali;Utile;Occasionale;Tutto l'anno;Migrazione;75;1;1;05/03/2025
+617;2THELOO;Shopping;Servizi toilette;Utile;Occasionale;Viaggio;Migrazione;74;1;1;25/05/2025
+618;ALE HOP;Shopping;Souvenir;Voluttuario;Occasionale;Estera;Migrazione;80;1;1;18/12/2024
+619;TABACCHI;Shopping;Tabacchino;Voluttuario;Occasionale;Invernale;Applicazione;80;1;1;19/04/2025
+620;SUNDAYS HANDELS;Shopping;Varie;Utile;Occasionale;Estera;Migrazione;70;1;1;26/04/2025
+621;CBILL/PAGOPA;Stato;Commissioni;Utile;Annuale;Tutto l'anno;Migrazione;85;1;2;19/01/2025
+622;Automobile Club Italia;Stato;Tasse;;;;Migrazione;95;4;0;Mai utilizzato
+623;COMUNE;Stato;Tasse;Neutrale;Occasionale;Tutto l'anno;Migrazione;85;4;2;19/01/2025
+624;DELEGA;Stato;Tasse;Neutrale;Occasionale;Tutto l'anno;Migrazione;92;4;3;26/05/2025
+625;IMPOSTA DI BOLLO;Stato;Tasse;Neutrale;Annuale;Tutto l'anno;Migrazione;95;4;5;30/06/2025
+626;CABANA;Svago;Bar;Voluttuario;Occasionale;Estiva;Migrazione;78;2;1;20/07/2024
+627;CHORUS CAFE';Svago;Bar;Voluttuario;Occasionale;Tutto l'anno;Migrazione;77;2;1;28/12/2024
+628;SIEBENSTERNBRAEU;Svago;Birreria;Voluttuario;Occasionale;Estiva;Migrazione;85;1;1;24/04/2025
+629;BRICOWARE;Svago;Fai da te;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;2;08/08/2025
+630;LIVE;Svago;Musica;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;1;2;05/04/2025
+631;LABYRINTH;Svago;PUB;Base;Occasionale;Annuale;Applicazione;80;1;1;01/08/2025
+632;ASSOCIAZIONE;Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;85;3;2;03/12/2024
+633;BLU DEEP EMOTIONS;Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;85;3;4;04/10/2024
+634;QUOTA ASSOCIATIVA;Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;80;3;2;04/09/2024
+635;PONZA;Tempo Libero;Barca;Voluttuario;Occasionale;Estiva;Migrazione;88;2;5;29/06/2025
+636;SOLDI;Tempo Libero;Barca;Essenziale;Annuale;Estiva;Migrazione;70;2;1;01/07/2025
+637;HANAMI SUSHI;Tempo Libero;Benessere;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;2;1;19/07/2025
+638;WE MAKE;Tempo Libero;Benessere;Utile;Occasionale;Tutto l'anno;Migrazione;78;2;1;22/12/2024
+639;BIBLIOBAR;Tempo Libero;Biblioteca;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;1;03/11/2024
+640;PLAKA CAMPING;Tempo Libero;Camping;Utile;Occasionale;Estiva;Migrazione;80;1;2;24/07/2024
+641;BALAGAN;Tempo Libero;Discoteca;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;1;04/07/2025
+642;COUNTRY CLUB;Tempo Libero;Golf Club;Utile;Occasionale;Tutto l'anno;Migrazione;77;1;1;23/11/2024
+643;FULGOR SRLS;Tempo Libero;Mare;Base;Occasionale;Estiva;Applicazione;100;1;2;09/08/2025
+644;CHANO CLUB;Tempo Libero;Night Club;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73;1;1;23/04/2025
+645;LA CIVETTA;Tempo Libero;Ristoranti;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;1;07/12/2024
+646;PARCO DEI PINI;Tempo Libero;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80;1;1;07/09/2024
+647;AL MARE DA ANGELA;Tempo Libero;Spiaggia;Voluttuario;Occasionale;Estiva;Migrazione;80;3;1;08/06/2025
+648;AMARE HOLI;Tempo Libero;Spiaggia;Voluttuario;Occasionale;Estiva;Migrazione;80;3;1;20/07/2025
+649;RAMBLA;Tempo Libero;Spiaggia;Voluttuario;Occasionale;Estiva;Migrazione;82;3;1;08/09/2024
+650;A.S.D. CETUS;Tempo Libero;Sport;Utile;Annuale;Tutto l'anno;Migrazione;78;9;1;24/10/2024
+651;ASD ANDROMEDA;Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;85;9;2;08/09/2024
+652;ASD CETUS;Tempo Libero;Sport;;;;Migrazione;78;9;0;Mai utilizzato
+653;CORSO SUB;Tempo Libero;Sport;Essenziale;Occasionale;Tutto l'anno;Migrazione;85;9;1;05/09/2024
+654;OWD;Tempo Libero;Sport;Utile;Occasionale;Tutto l'anno;Migrazione;85;9;1;04/10/2024
+655;SCI;Tempo Libero;Sport;Voluttuario;Occasionale;Invernale;Migrazione;85;9;10;15/06/2025
+656;SPORT;Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;80;9;7;15/05/2025
+657;SPORT ACADEMY;Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;80;9;1;05/07/2024
+658;SPORTIVA;Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;85;9;3;03/12/2024
+659;LIDO DON PABLO;Tempo Libero;Stabilimento;Voluttuario;Occasionale;Estiva;Migrazione;80;1;3;16/08/2024
+660;TEATRO OPERA;Tempo Libero;Teatro;Culturale;Occasionale;Tutto l'anno;Migrazione;80;1;2;19/01/2025
+661;STAZIONE MOLE;Trasporti;Stazioni;Utile;Occasionale;Tutto l'anno;Migrazione;70;1;1;12/08/2024
+662;BOOKING;Trasporti;Trasporti pubblici;;;;Migrazione;85;4;0;Mai utilizzato
+663;ITALO;Trasporti;Trasporti pubblici;;;;Migrazione;95;4;0;Mai utilizzato
+664;RYANAIR;Trasporti;Trasporti pubblici;;;;Migrazione;90;4;0;Mai utilizzato
+665;TRENITALIA;Trasporti;Trasporti pubblici;;;;Migrazione;95;4;0;Mai utilizzato
+666;OEBB TICKET;Trasporti;Viaggi;Utile;Occasionale;Viaggio;Migrazione;80;1;2;27/04/2025
+667;GESTIONI RIUNITE;Varie;Servizi;Utile;Occasionale;Tutto l'anno;Migrazione;80;1;1;30/11/2024
+668;SKY EXPRE;Viaggi;Aereo;Voluttuario;Occasionale;Estiva;Migrazione;72;1;1;19/07/2024
+669;AGOSTA NAOUSA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;74;29;1;20/07/2024
+670;BARCELONA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85;29;11;29/09/2024
+671;CHRYSOVALANTOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;24/07/2024
+672;IL MIO PECCATO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72;29;1;11/07/2025
+673;KHM-KHM-KA76;Viaggi;Estero;Culturale;Occasionale;Estera;Migrazione;80;29;1;25/04/2025
+674;KYKLADES TOURISTIKES;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;21/07/2024
+675;LACHANIATI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;74;29;1;11/07/2025
+676;LADIKO RODOY;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75;29;1;13/07/2025
+677;LILLE FRA;Viaggi;Estero;Voluttuario;Occasionale;Tutto l'anno;Applicazione;80;29;9;30/05/2025
+678;LINDOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;80;29;1;08/07/2025
+679;MARIA DAMIGOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;28/07/2024
+680;MARIA NOMIKOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;26/07/2024
+681;NOMIKOS MAPKOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;27/07/2024
+682;PANAGIOTIS PLATIS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;23/07/2024
+683;PARALIA AGATHI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75;29;1;12/07/2025
+684;RHODOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;90;29;1;07/07/2025
+685;RODI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85;29;1;06/06/2025
+686;RODOS;Viaggi;Estero;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85;29;11;15/07/2025
+687;SATU SINIKKA ANDRIKU;Viaggi;Estero;Voluttuario;Occasionale;Viaggio/Estivo;Migrazione;75;29;2;09/07/2025
+688;SIFONIOU KALLIOPI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72;29;1;11/07/2025
+689;SKLAVENITIS;Viaggi;Estero;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80;29;1;08/07/2025
+690;SKY;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75;29;2;26/12/2024
+691;SYMIDALAS ILIAS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;27/07/2024
+692;THEOLOGITIS DIMITRIO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;2;27/07/2024
+693;TSAMPIKOS ATSAIDIS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72;29;2;13/07/2025
+694;TSAMPIKOS WATERSPO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70;29;1;11/07/2025
+695;TZIVELEK;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75;29;1;11/07/2025
+696;VAGIANOY;Viaggi;Estero;Voluttuario;Occasionale;Viaggio/Estivo;Migrazione;73;29;1;09/07/2025
+697;VIENNA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85;29;3;23/04/2025
+698;GRAND HOTEL;Viaggi;Hotel;Voluttuario;Occasionale;Estiva;Migrazione;90;3;2;07/05/2025
+699;HAVANA BEACH;Viaggi;Hotel;Voluttuario;Occasionale;Estiva;Migrazione;90;3;8;01/05/2025
+700;HOTEL MILANO;Viaggi;Hotel;Voluttuario;Occasionale;Viaggio;Migrazione;80;3;1;12/06/2025
+701;SALDO;Viaggi;Spese;Utile;Fissa;Tutto l'anno;Migrazione;82;2;18;31/07/2025
+702;SPESE;Viaggi;Spese;Essenziale;Fissa;Tutto l'anno;Migrazione;88;2;18;07/08/2025
+703;BLUE STAR;Viaggi;Trasporto;Utile;Occasionale;Viaggio;Migrazione;82;2;1;25/07/2024
+704;STAZIONE TTP;Viaggi;Trasporto;Utile;Occasionale;Tutto l'anno;Migrazione;80;2;1;14/06/2025

@@ -1,0 +1,340 @@
+ID;PAROLA;MacroCategoria;Categoria;Necessita;Frequenza;Stagionalita;Fonte;Peso
+366;ARIDA CAFFE;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Tutto l'anno;Migrazione;77
+367;CAFFETTERIA;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Tutto l'anno;Migrazione;75
+368;FAUST SATYRUS;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Tutto l'anno;Migrazione;70
+369;FRAGISKOS;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;72
+370;IDEA KAFE;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;77
+371;KATSANIS;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;73
+372;LA BOTTEGA DEL CAFFE';Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Tutto l'anno;Migrazione;78
+373;MOYSTAKIS;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;75
+374;MY COFFEE;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;78
+375;OPEC;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Tutto l'anno;Migrazione;70
+376;RELAX;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;77
+377;SKOULATOS;Alimentari e Ristorazione;Bar e Caffe;Utile;Occasionale;Estiva;Migrazione;75
+378;STARBUCKS;Alimentari e Ristorazione;Bar e Caffe;Voluttuario;Occasionale;Estera;Migrazione;95
+379;A BRASILEIRA;Alimentari e Ristorazione;Bar e Caffe;Voluttuario;Occasionale;Estiva;Migrazione;70
+384;AMI POKE';Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+385;AMOR DI GUSTO;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78
+386;ARGU;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+387;BISTROT;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82
+388;BOLOGNA FOOD GALLERY;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+389;CR ITALY;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+390;FARIN KITCHEN;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+391;FATIFER;Alimentari e Ristorazione;Gastronomia;Utile;Occasionale;Tutto l'anno;Migrazione;75
+392;POLLERIA;Alimentari e Ristorazione;Gastronomia;Utile;Occasionale;Tutto l'anno;Migrazione;75
+393;GELARMONY;Alimentari e Ristorazione;Gastronomia;Utile;Occasionale;Tutto l'anno;Migrazione;80
+394;I NOBILI GELATERIA;Alimentari e Ristorazione;Gastronomia;Utile;Occasionale;Estiva;Migrazione;81
+395;SCAGORA GOURMET;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Estera;Migrazione;78
+402;MENSA POLO;Alimentari e Ristorazione;Mensa;Essenziale;Occasionale;Tutto l'anno;Migrazione;90
+403;MENSA POLO TUSCOLANO;Alimentari e Ristorazione;Mensa;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+404;IL TIGELLINO;Alimentari e Ristorazione;Panetteria e Dolci;Utile;Occasionale;Tutto l'anno;Migrazione;75
+405;LA FAMILLE;Alimentari e Ristorazione;Panetteria e Dolci;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+406;LE PALME;Alimentari e Ristorazione;Panetteria e Dolci;Essenziale;Occasionale;Tutto l'anno;Migrazione;75
+407;PAUL1;Alimentari e Ristorazione;Panetteria e Dolci;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73
+408;PAUSE SANDWICH;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;80
+409;CARRINHO CONFEITARIA;Alimentari e Ristorazione;Panetteria e Dolci;Essenziale;Occasionale;Estiva;Migrazione;70
+410;CORNETTOLANDIA;Alimentari e Ristorazione;Panetteria e Dolci;Utile;Occasionale;Tutto l'anno;Migrazione;80
+411;LA PROMENADE;Alimentari e Ristorazione;Panetteria e Dolci;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+412;OBERLAA KONDITOREI;Alimentari e Ristorazione;Panetteria e Dolci;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;88
+413;PASTEIS DE BELEM;Alimentari e Ristorazione;Panetteria e Dolci;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90
+415;ANGELO PEZZELLA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90
+416;PAPA POSTO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+417;RAMEN TON BOL;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;80
+418;BAR;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;60
+419;BELLOTA-BELLOTA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+420;BLANCO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+421;BUDDHA SMILE;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;88
+422;BURGER KING;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;95
+423;CAMAL;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+424;CHALET LA DELIZIA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;75
+425;CIBIVACCO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+426;Country Club di Gu Calcata;Alimentari e Ristorazione;Ristorazione;Utile;Occasionale;Tutto l'anno;Migrazione;100
+427;DA AGNESE;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82
+428;DA GIGI;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+429;DA NOI;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;83
+430;DA PAOLO ALLA CAPANNIN;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+431;DELIVEROO;Alimentari e Ristorazione;Ristorazione;;;Migrazione;90;
+432;DONNA CIRA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82
+433;GLOVO;Alimentari e Ristorazione;Ristorazione;;;Migrazione;90;
+434;GUSTAMI DI IOVANE MARC;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Invernale;Migrazione;90
+435;HELLO SAILOR;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+436;IZUMA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+437;KALAPA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78
+438;KELSEN IM PARLAMENT;Alimentari e Ristorazione;Ristorazione;Culturale;Occasionale;Estera;Migrazione;75
+439;KIYOMI;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+440;KOLETSA MARIA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;70
+441;KRAM;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+442;LA LAMPARA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+443;LA PASTERIA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estiva;Migrazione;75
+444;LA PIAZZA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;77
+445;LA SOLITA ZUPPA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+446;LI VOLSI;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+447;MARIA JESUS PINHEIRO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;70
+448;MCDONALD;Alimentari e Ristorazione;Ristorazione;;;Migrazione;95;
+449;MESSICO E NUVOLE;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+450;MON AMI';Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+451;MYCHEF;Alimentari e Ristorazione;Ristorazione;Utile;Occasionale;Viaggio;Migrazione;80
+452;OPIA SRL;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;100
+453;OSTERIA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;95
+454;PEGAL A GOSTO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;75
+455;PEPPE O RUSSO;Alimentari e Ristorazione;Ristorazione;Essenziale;Occasionale;Tutto l'anno;Migrazione;75
+456;PIZZERIA;Alimentari e Ristorazione;Ristorazione;;;Migrazione;92;
+457;QUINTO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+458;RISTORANTE;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;97
+459;SDP MAGLIANO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+460;SEVEN;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+461;SUSHI GOOD;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+462;TABACCHERIA FILIU';Alimentari e Ristorazione;Ristorazione;Utile;Occasionale;Tutto l'anno;Migrazione;70
+463;TABERNA DA BAIXA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;75
+464;TAVERNA;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90
+465;THE BASE;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+466;UBER EATS;Alimentari e Ristorazione;Ristorazione;;;Migrazione;90;
+467;VAPIANO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Estera;Migrazione;88
+487;KONTOS SOUVLAKI;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Estiva;Migrazione;78
+488;BI BIM BAP;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73
+489;EMPANADAS MBQ;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Estiva;Migrazione;75
+490;HAPPY FOOD;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+491;TREDICINE DINO;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82
+492;ZUM GOLDENEN WUERSTL;Alimentari e Ristorazione;Street Food;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;85
+504;YO FUSION;Alimentari e Ristorazione;Gastronomia;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78
+587;BARRIOLATINO;Alimentari e Ristorazione;Ristorazione;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+505;AUTOGRILL;Auto e Trasporti;Servizi Auto;Voluttuario;Occasionale;Viaggio;Migrazione;82
+506;AGIP;Auto e Trasporti;Carburante;;;Manuale;100;
+507;BENZINA;Auto e Trasporti;Carburante;;;Manuale;100;
+508;EASY SERVICE;Auto e Trasporti;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;90
+509;ENERPETROLI;Auto e Trasporti;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+510;ENI;Auto e Trasporti;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;100
+511;FIAMMA;Auto e Trasporti;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+512;IP;Auto e Trasporti;Carburante;Essenziale;Ricorrente;Tutto l'anno;Migrazione;85
+513;MY OILVIA;Auto e Trasporti;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+514;Q8;Auto e Trasporti;Carburante;Essenziale;Ricorrente;Tutto l'anno;Manuale;100
+515;SHELL;Auto e Trasporti;Carburante;;;Manuale;100;
+516;TAMOIL;Auto e Trasporti;Carburante;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+517;C.M. MOTORI;Auto e Trasporti;Servizi Auto;Utile;Occasionale;Tutto l'anno;Migrazione;85
+518;CAR SHOP;Auto e Trasporti;Servizi Auto;Utile;Occasionale;Tutto l'anno;Migrazione;72
+519;PARCHEGGIO;Auto e Trasporti;Parcheggio;Utile;Occasionale;Tutto l'anno;Migrazione;80
+520;PARK AND FLY;Auto e Trasporti;Parcheggio;Neutrale;Occasionale;Viaggio;Migrazione;80
+521;SOSTA;Auto e Trasporti;Parcheggio;;;Migrazione;70;
+522;ASPIT NOLA;Auto e Trasporti;Pedaggi;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+523;TELEPASS;Auto e Trasporti;Pedaggi;Utile;Fissa;Tutto l'anno;Migrazione;95
+661;STAZIONE MOLE;Auto e Trasporti;Trasporti;Utile;Occasionale;Tutto l'anno;Migrazione;70
+662;BOOKING;Auto e Trasporti;Trasporti;;;Migrazione;85;
+663;ITALO;Auto e Trasporti;Trasporti;;;Migrazione;95;
+664;RYANAIR;Auto e Trasporti;Trasporti;;;Migrazione;90;
+665;TRENITALIA;Auto e Trasporti;Trasporti;;;Migrazione;95;
+666;OEBB TICKET;Auto e Trasporti;Trasporti;Utile;Occasionale;Viaggio;Migrazione;80
+703;BLUE STAR;Auto e Trasporti;Trasporti;Utile;Occasionale;Viaggio;Migrazione;82
+704;STAZIONE TTP;Auto e Trasporti;Trasporti;Utile;Occasionale;Tutto l'anno;Migrazione;80
+524;45575 NOLA;Banca e Finanze;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70
+525;PV5587;Banca e Finanze;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70
+526;PV7264;Banca e Finanze;Bancomat;Utile;Occasionale;Tutto l'anno;Migrazione;70
+527;CREDITO COOPERATIVO;Banca e Finanze;Servizi;Neutrale;Fissa;Tutto l'anno;Migrazione;90
+528;AUTOMOBILE;Banca e Finanze;Commissioni;Utile;Annuale;Tutto l'anno;Migrazione;90
+529;BANCOMAT ESTERO;Banca e Finanze;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;90
+530;COMMISSIONI;Banca e Finanze;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+531;IMPOSTA;Banca e Finanze;Commissioni;Neutrale;Annuale;Tutto l'anno;Migrazione;85
+532;Imposte e Tasse;Banca e Finanze;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;85
+533;PRELIEVO;Banca e Finanze;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;75
+534;SEPA;Banca e Finanze;Commissioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+535;INTERESSI;Banca e Finanze;Servizi;Neutrale;Annuale;Tutto l'anno;Migrazione;85
+536;ATM;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;85
+537;FALIRAKI;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+538;FIUMICINO;Banca e Finanze;Operazioni;Voluttuario;Occasionale;Estiva;Migrazione;80
+539;NAPOLI;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+540;PRELEVAMENTO;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;85
+541;VERSAMENTO;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+542;STORNO;Banca e Finanze;Servizi;Neutrale;Occasionale;Tutto l'anno;Migrazione;85
+575;BONIFICO;Banca e Finanze;Operazioni;Neutrale;Occasionale;Tutto l'anno;Migrazione;70
+399;LAVANDERIA DM;Casa e Servizi;Servizi Casa;Utile;Occasionale;Tutto l'anno;Migrazione;75
+543;CASALANDIA;Casa e Servizi;Arredamento;Utile;Occasionale;Tutto l'anno;Migrazione;75
+544;ZERO FASHION;Casa e Servizi;Arredamento;Utile;Occasionale;Tutto l'anno;Migrazione;80
+545;ASSICURAZIONE;Casa e Servizi;Assicurazioni;Essenziale;Annuale;Tutto l'anno;Migrazione;90
+546;BARCA;Casa e Servizi;Assicurazioni;Essenziale;Ricorrente;Tutto l'anno;Migrazione;92
+547;CHARTER;Casa e Servizi;Assicurazioni;Essenziale;Annuale;Estiva;Migrazione;92
+548;QUOTA ASSICURAZIONE;Casa e Servizi;Assicurazioni;Essenziale;Annuale;Tutto l'anno;Migrazione;90
+549;EDILBRIKO;Casa e Servizi;Bricolage;Utile;Occasionale;Tutto l'anno;Migrazione;72
+550;CAPSULE E CIALDE;Casa e Servizi;Altro;Utile;Occasionale;Tutto l'anno;Migrazione;80
+551;ACCONTO;Casa e Servizi;Condominio;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+552;MEDIAZIONE;Casa e Servizi;Condominio;Essenziale;Annuale;Tutto l'anno;Migrazione;90
+553;QUOTE;Casa e Servizi;Condominio;Essenziale;Annuale;Tutto l'anno;Migrazione;90
+554;RATA;Casa e Servizi;Condominio;Essenziale;Ricorrente;Tutto l'anno;Migrazione;92
+555;CASALINGHI SU LIAI;Casa e Servizi;Altro;Utile;Occasionale;Tutto l'anno;Migrazione;75
+556;EDILMARKET;Casa e Servizi;Bricolage;Utile;Occasionale;Tutto l'anno;Migrazione;80
+557;MUTUO;Casa e Servizi;Mutuo;Essenziale;Fissa;Tutto l'anno;Migrazione;92
+558;AMAZON PRIME;Casa e Servizi;Servizi Casa;;;Migrazione;90;
+559;LAVANDERIA;Casa e Servizi;Servizi Casa;Utile;Occasionale;Tutto l'anno;Migrazione;75
+560;NETFLIX;Casa e Servizi;Servizi Casa;Voluttuario;Fissa;Tutto l'anno;Migrazione;95
+561;SPOTIFY;Casa e Servizi;Servizi Casa;;;Migrazione;95;
+562;EUROHOME;Casa e Servizi;Arredamento;Utile;Occasionale;Tutto l'anno;Migrazione;70
+563;IKEA;Casa e Servizi;Arredamento;;;Migrazione;95;
+564;FASTWEB;Casa e Servizi;Utenze;;;Migrazione;95;
+565;TIM;Casa e Servizi;Utenze;Essenziale;Fissa;Tutto l'anno;Migrazione;95
+566;VODAFONE;Casa e Servizi;Utenze;Essenziale;Fissa;Tutto l'anno;Migrazione;95
+567;WIND;Casa e Servizi;Utenze;;;Migrazione;95;
+629;BRICOWARE;Casa e Servizi;Bricolage;Utile;Occasionale;Tutto l'anno;Migrazione;70
+568;VIAGGIO;Lavoro e Entrate;Bonifico;Voluttuario;Occasionale;Estiva;Migrazione;90
+569;ANTICIPO;Lavoro e Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90
+570;Emolumenti;Lavoro e Entrate;Lavoro;Essenziale;Ricorrente;Tutto l'anno;Migrazione;100
+571;MIN.INT.SEGR.DIP.TO PUBB.SICU.;Lavoro e Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;92
+572;MISSIONE;Lavoro e Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90
+573;SALDI MISS;Lavoro e Entrate;Lavoro;Entrata;Occasionale;Tutto l'anno;Migrazione;90
+574;FARMACIA;Salute;Farmacia;Essenziale;Occasionale;Essenziale;Manuale;100
+588;ALBAMEDICA;Salute;Cliniche;Essenziale;Occasionale;Tutto l'anno;Migrazione;75
+589;ANAGNINA HFB ECO;Salute;Farmacia;Essenziale;Occasionale;Tutto l'anno;Migrazione;79
+577;ARTE E VINO;Servizi e Pagamenti;Gastronomia Locale;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+578;MI' NDUJO;Servizi e Pagamenti;Gastronomia Locale;Voluttuario;Occasionale;Tutto l'anno;Migrazione;70
+579;RICA GEST;Servizi e Pagamenti;Servizi Vari;Utile;Occasionale;Tutto l'anno;Migrazione;70
+584;LIS PAY;Servizi e Pagamenti;Pagamenti Digitali;Neutrale;Occasionale;Tutto l'anno;Migrazione;80
+585;FAST PAY;Servizi e Pagamenti;Pagamenti Digitali;Utile;Fissa;Tutto l'anno;Migrazione;80
+586;SAPORE DI MARE;Servizi e Pagamenti;Gastronomia Locale;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+590;NUOVA SIDAP;Servizi e Pagamenti;Servizi Vari;Utile;Occasionale;Tutto l'anno;Migrazione;70
+591;SHOP & GO;Servizi e Pagamenti;Pagamenti Digitali;Voluttuario;Occasionale;Tutto l'anno;Migrazione;75
+592;SUMUP;Servizi e Pagamenti;Pagamenti Digitali;Utile;Occasionale;Tutto l'anno;Migrazione;90
+667;GESTIONI RIUNITE;Servizi e Pagamenti;Servizi Vari;Utile;Occasionale;Tutto l'anno;Migrazione;80
+593;DECATHLON;Shopping;Abbigliamento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;90
+594;LE SOYEUX;Shopping;Abbigliamento;Voluttuario;Occasionale;Viaggio/Estera;Migrazione;75
+595;PRIMARK;Shopping;Abbigliamento;Voluttuario;Occasionale;Saldi;Migrazione;80
+596;ZARA;Shopping;Abbigliamento;Voluttuario;Occasionale;Saldi;Migrazione;85
+597;CRF MRK;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;75
+598;AMAZON;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Manuale;90
+599;COSMO SPA;Shopping;Servizi;Utile;Occasionale;Tutto l'anno;Migrazione;80
+600;EURONICS;Shopping;Elettronica;Utile;Occasionale;Tutto l'anno;Migrazione;79
+601;BRITANNIA;Shopping;Servizi;Utile;Occasionale;Tutto l'anno;Migrazione;75
+602;FACTO2;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;80
+603;PV5649;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;75
+604;MATCH;Shopping;Libri;Utile;Occasionale;Viaggio;Migrazione;77
+605;MONDADORI;Shopping;Libri;Utile;Occasionale;Tutto l'anno;Migrazione;78
+606;LISMARKETING;Shopping;Marketing;Utile;Occasionale;Estera;Migrazione;70
+607;S FACTORY;Shopping;Abbigliamento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+608;ARCA;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;80
+609;GRUPPO NEGOZI;Shopping;Negozi;Utile;Occasionale;Tutto l'anno;Migrazione;75
+610;AMAZON PAYMENTS;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;94
+611;IDEASVAPOSR;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+612;PAYPAL;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;88
+613;SHEIN;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;97
+614;SVAPODREAM;Shopping;Online;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+615;LUX PRODUZIONI;Shopping;Servizi;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+616;C.I.T.;Shopping;Servizi;Utile;Occasionale;Tutto l'anno;Migrazione;75
+617;2THELOO;Shopping;Servizi;Utile;Occasionale;Viaggio;Migrazione;74
+618;ALE HOP;Shopping;Servizi;Voluttuario;Occasionale;Estera;Migrazione;80
+619;TABACCHI;Shopping;Servizi;Voluttuario;Occasionale;Invernale;Applicazione;80
+620;SUNDAYS HANDELS;Shopping;Negozi;Utile;Occasionale;Estera;Migrazione;70
+380;ANAGNINA FOOD KIOSK;Spesa e Supermercati;Altro;Voluttuario;Occasionale;Tutto l'anno;Migrazione;79
+381;ROMANA FLORA;Spesa e Supermercati;Altro;Utile;Occasionale;Tutto l'anno;Migrazione;70
+382;FRUTTERIA;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;90
+383;IL MONDO DELLA FRUTTA;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;78
+396;TRUTH;Spesa e Supermercati;Altro;Utile;Occasionale;Tutto l'anno;Migrazione;70
+397;CASEIFICIO GIUSTI;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+398;CASEIFICIO LA PAGLIARA;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;75
+400;IL MANNARINO;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+401;NORCINERIA LA VILLETTA;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+414;PESCE & P.;Spesa e Supermercati;Prodotti Freschi;Voluttuario;Occasionale;Tutto l'anno;Migrazione;82
+468;CARREFOUR;Spesa e Supermercati;Supermercati;;;Manuale;80;
+469;CASA OZ;Spesa e Supermercati;Supermercati;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+470;CONAD;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Essenziale;Manuale;90
+471;COOP;Spesa e Supermercati;Supermercati;Neutrale;Fissa;Tutto l'anno;Manuale;90
+472;CRAI;Spesa e Supermercati;Supermercati;;;Migrazione;85;
+473;EMERALD'S;Spesa e Supermercati;Supermercati;Essenziale;Occasionale;Tutto l'anno;Migrazione;75
+474;ESSELUNGA;Spesa e Supermercati;Supermercati;;;Manuale;90;
+475;EUROSPAR;Spesa e Supermercati;Supermercati;;;Migrazione;85;
+476;FOOD SERVICE;Spesa e Supermercati;Supermercati;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+477;IPERCOOP;Spesa e Supermercati;Supermercati;;;Migrazione;85;
+478;LIDL;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;97
+479;PANIFICIO;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;90
+480;PANORAMA;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;95
+481;PENNY;Spesa e Supermercati;Supermercati;;;Migrazione;80;
+482;PEWEX;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;97
+483;SCOMODO;Spesa e Supermercati;Supermercati;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+484;SPESA;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80
+485;SUPERMERCATI;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;95
+486;SUPERMERCATO TOP;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Essenziale;Migrazione;90
+493;BAZAAR;Spesa e Supermercati;Negozi Specializzati;Essenziale;Occasionale;Estiva;Migrazione;75
+494;CRF LILLE;Spesa e Supermercati;Negozi Specializzati;Voluttuario;Occasionale;Tutto l'anno;Migrazione;78
+495;DESYDERIO;Spesa e Supermercati;Negozi Specializzati;Utile;Occasionale;Tutto l'anno;Migrazione;75
+496;HAVANA;Spesa e Supermercati;Negozi Specializzati;Voluttuario;Occasionale;Estiva;Migrazione;75
+497;RELAY;Spesa e Supermercati;Negozi Specializzati;Essenziale;Occasionale;Viaggio;Migrazione;70
+498;SPAR;Spesa e Supermercati;Negozi Specializzati;Essenziale;Occasionale;Viaggio;Migrazione;82
+499;SUNSET BEACH;Spesa e Supermercati;Negozi Specializzati;Utile;Occasionale;Estiva;Migrazione;75
+500;SUPER MARKET BAZAAR;Spesa e Supermercati;Negozi Specializzati;Voluttuario;Occasionale;Estiva;Migrazione;78
+501;SUPERMERCATO;Spesa e Supermercati;Supermercati;Essenziale;Ricorrente;Essenziale;Manuale;100
+502;TEDI;Spesa e Supermercati;Negozi Specializzati;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80
+503;EUROSURGELATI;Spesa e Supermercati;Prodotti Freschi;Essenziale;Occasionale;Tutto l'anno;Migrazione;80
+576;TIME FITNESS;Svago e Tempo Libero;Sport;Essenziale;Fissa;Tutto l'anno;Migrazione;88
+580;CINEMA;Svago e Tempo Libero;Intrattenimento;;;Migrazione;80;
+581;PALESTRA;Svago e Tempo Libero;Sport;;;Migrazione;80;
+626;CABANA;Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Estiva;Migrazione;78
+627;CHORUS CAFE';Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;77
+628;SIEBENSTERNBRAEU;Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Estiva;Migrazione;85
+630;LIVE;Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+631;LABYRINTH;Svago e Tempo Libero;Intrattenimento;Base;Occasionale;Annuale;Applicazione;80
+632;ASSOCIAZIONE;Svago e Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;85
+633;BLU DEEP EMOTIONS;Svago e Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;85
+634;QUOTA ASSOCIATIVA;Svago e Tempo Libero;Associazioni;Utile;Annuale;Tutto l'anno;Migrazione;80
+635;PONZA;Svago e Tempo Libero;Barca;Voluttuario;Occasionale;Estiva;Migrazione;88
+636;SOLDI;Svago e Tempo Libero;Barca;Essenziale;Annuale;Estiva;Migrazione;70
+637;HANAMI SUSHI;Svago e Tempo Libero;Benessere;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+638;WE MAKE;Svago e Tempo Libero;Benessere;Utile;Occasionale;Tutto l'anno;Migrazione;78
+639;BIBLIOBAR;Svago e Tempo Libero;Cultura;Utile;Occasionale;Tutto l'anno;Migrazione;80
+640;PLAKA CAMPING;Svago e Tempo Libero;Camping;Utile;Occasionale;Estiva;Migrazione;80
+641;BALAGAN;Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+642;COUNTRY CLUB;Svago e Tempo Libero;Cultura;Utile;Occasionale;Tutto l'anno;Migrazione;77
+643;FULGOR SRLS;Svago e Tempo Libero;Spiaggia e Mare;Base;Occasionale;Estiva;Applicazione;100
+644;CHANO CLUB;Svago e Tempo Libero;Intrattenimento;Voluttuario;Occasionale;Tutto l'anno;Migrazione;73
+645;LA CIVETTA;Svago e Tempo Libero;Ristoranti Tempo Libero;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+646;PARCO DEI PINI;Svago e Tempo Libero;Ristoranti Tempo Libero;Voluttuario;Occasionale;Tutto l'anno;Migrazione;80
+647;AL MARE DA ANGELA;Svago e Tempo Libero;Spiaggia e Mare;Voluttuario;Occasionale;Estiva;Migrazione;80
+648;AMARE HOLI;Svago e Tempo Libero;Spiaggia e Mare;Voluttuario;Occasionale;Estiva;Migrazione;80
+649;RAMBLA;Svago e Tempo Libero;Spiaggia e Mare;Voluttuario;Occasionale;Estiva;Migrazione;82
+650;A.S.D. CETUS;Svago e Tempo Libero;Sport;Utile;Annuale;Tutto l'anno;Migrazione;78
+651;ASD ANDROMEDA;Svago e Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;85
+652;ASD CETUS;Svago e Tempo Libero;Sport;;;Migrazione;78;
+653;CORSO SUB;Svago e Tempo Libero;Sport;Essenziale;Occasionale;Tutto l'anno;Migrazione;85
+654;OWD;Svago e Tempo Libero;Sport;Utile;Occasionale;Tutto l'anno;Migrazione;85
+655;SCI;Svago e Tempo Libero;Sport;Voluttuario;Occasionale;Invernale;Migrazione;85
+656;SPORT;Svago e Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;80
+657;SPORT ACADEMY;Svago e Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;80
+658;SPORTIVA;Svago e Tempo Libero;Sport;Utile;Ricorrente;Tutto l'anno;Migrazione;85
+659;LIDO DON PABLO;Svago e Tempo Libero;Spiaggia e Mare;Voluttuario;Occasionale;Estiva;Migrazione;80
+660;TEATRO OPERA;Svago e Tempo Libero;Cultura;Culturale;Occasionale;Tutto l'anno;Migrazione;80
+621;CBILL/PAGOPA;Tasse e Stato;Commissioni Stato;Utile;Annuale;Tutto l'anno;Migrazione;85
+622;Automobile Club Italia;Tasse e Stato;Tasse;;;Migrazione;95;
+623;COMUNE;Tasse e Stato;Tasse;Neutrale;Occasionale;Tutto l'anno;Migrazione;85
+624;DELEGA;Tasse e Stato;Tasse;Neutrale;Occasionale;Tutto l'anno;Migrazione;92
+625;IMPOSTA DI BOLLO;Tasse e Stato;Tasse;Neutrale;Annuale;Tutto l'anno;Migrazione;95
+582;MAKERE;Viaggi;Noleggio;Utile;Occasionale;Estiva;Migrazione;73
+583;Y.R.G.;Viaggi;Noleggio;Utile;Occasionale;Estiva;Migrazione;70
+668;SKY EXPRE;Viaggi;Aereo;Voluttuario;Occasionale;Estiva;Migrazione;72
+669;AGOSTA NAOUSA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;74
+670;BARCELONA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85
+671;CHRYSOVALANTOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+672;IL MIO PECCATO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72
+673;KHM-KHM-KA76;Viaggi;Estero;Culturale;Occasionale;Estera;Migrazione;80
+674;KYKLADES TOURISTIKES;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+675;LACHANIATI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;74
+676;LADIKO RODOY;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75
+677;LILLE FRA;Viaggi;Estero;Voluttuario;Occasionale;Tutto l'anno;Applicazione;80
+678;LINDOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;80
+679;MARIA DAMIGOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+680;MARIA NOMIKOU;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+681;NOMIKOS MAPKOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+682;PANAGIOTIS PLATIS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+683;PARALIA AGATHI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75
+684;RHODOS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;90
+685;RODI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85
+686;RODOS;Viaggi;Estero;Voluttuario;Occasionale;Tutto l'anno;Migrazione;85
+687;SATU SINIKKA ANDRIKU;Viaggi;Estero;Voluttuario;Occasionale;Viaggio/Estivo;Migrazione;75
+688;SIFONIOU KALLIOPI;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72
+689;SKLAVENITIS;Viaggi;Estero;Essenziale;Ricorrente;Tutto l'anno;Migrazione;80
+690;SKY;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75
+691;SYMIDALAS ILIAS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+692;THEOLOGITIS DIMITRIO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+693;TSAMPIKOS ATSAIDIS;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;72
+694;TSAMPIKOS WATERSPO;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;70
+695;TZIVELEK;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;75
+696;VAGIANOY;Viaggi;Estero;Voluttuario;Occasionale;Viaggio/Estivo;Migrazione;73
+697;VIENNA;Viaggi;Estero;Voluttuario;Occasionale;Estiva;Migrazione;85
+698;GRAND HOTEL;Viaggi;Hotel;Voluttuario;Occasionale;Estiva;Migrazione;90
+699;HAVANA BEACH;Viaggi;Hotel;Voluttuario;Occasionale;Estiva;Migrazione;90
+700;HOTEL MILANO;Viaggi;Hotel;Voluttuario;Occasionale;Viaggio;Migrazione;80
+701;SALDO;Viaggi;Spese;Utile;Fissa;Tutto l'anno;Migrazione;82
+702;SPESE;Viaggi;Spese;Essenziale;Fissa;Tutto l'anno;Migrazione;88

@@ -1,0 +1,11 @@
+﻿{
+  "Nome": "Banca di Credito Cooperativo di Roma",
+  "RigaIntestazione": 1,
+  "MappingColonne": {
+    "Data": 1,
+    "Importo": 2,
+    "Descrizione": 3
+  },
+  "DataCreazione": "2025-08-19T16:48:37.2378417+02:00",
+  "UltimoUtilizzo": "2025-08-29T15:26:31.1021256+02:00"
+}
