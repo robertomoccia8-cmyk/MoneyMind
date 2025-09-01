@@ -1,0 +1,69 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Visual Studio cache
+.vs/
+**/.vs/
+*.user
+*.suo
+
+# NuGet packages folder
+packages/
+*.nupkg
+project.lock.json
+.nuget/
+
+# Rider / VS Code
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+**/Logs/
+
+# Local databases
+*.db
+*.mdf
+*.ldf
+**/App_Data/
+**/Data/
+
+# Export / Import samples
+importa transazioni/
+template excel/
+utili/
+
+# Office temporary files
+~$*
+*.csv
+*.xls
+*.xlsx
+*.pdf
+
+# Cache & temp files
+*.cache
+*.tmp
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Test results & coverage
+TestResults/
+*.coverage*
+*.opendb
+
+# Tool-specific
+*.dtbcache.v2
+*.metadata.v9.bin
+*.projects.v9.bin
+*.strings.v9.bin
+*.dtbcache.json
+
+# Generated code
+*.designer.vb
+*.designer.cs
+
+# Publish artifacts
+publish/
