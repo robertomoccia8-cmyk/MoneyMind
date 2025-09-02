@@ -14,7 +14,11 @@
       "Bash(\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe\" \"GestioneFinanzePersonali.vbproj\" /property:Configuration=Release)",
       "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" \"C:\\Users\\Collaudo5\\Documents\\GestioneFinanzePersonali\\GestioneFinanzePersonali\\GestioneFinanzePersonali.vbproj\" /build Release /out build.log)",
       "Bash(dir:*)",
-      "Bash(./GestioneFinanzePersonali.exe)"
+      "Bash(./GestioneFinanzePersonali.exe)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" \"C:\\Users\\Collaudo5\\Documents\\GestioneFinanzePersonali\\GestioneFinanzePersonali\\GestioneFinanzePersonali.vbproj\" /build Release)",
+      "Bash(git add .)"
     ],
     "deny": [],
     "ask": []

@@ -7,7 +7,7 @@ Public Class ApplicationInfo
     ''' <summary>
     ''' Versione corrente dell'applicazione (Semantic Versioning)
     ''' </summary>
-    Public Shared ReadOnly Property CurrentVersion As String = "1.0.0"
+    Public Shared ReadOnly Property CurrentVersion As String = "1.0.1"
     
     ''' <summary>
     ''' Nome dell'applicazione
