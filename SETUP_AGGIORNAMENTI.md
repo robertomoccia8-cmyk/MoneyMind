@@ -11,13 +11,13 @@ Public Shared ReadOnly Property GitHubRepository As String = "TUO_USERNAME/Money
 ### 2. Setup MSI Installer (Opzionale - WiX)
 Se vuoi usare il setup MSI professionale:
 - Installa [WiX Toolset v3.11+](http://wixtoolset.org/releases/)
-- Aggiungi il progetto `GestioneFinanzePersonali.Setup` alla solution
+- Aggiungi il progetto `MoneyMind.Setup` alla solution
 - Modifica gli GUID nel file `Product.wxs`
 
 ### 3. Build dell'Applicazione
 ```bash
 # Compila la Release
-msbuild GestioneFinanzePersonali.sln /p:Configuration=Release
+msbuild MoneyMind.sln /p:Configuration=Release
 
 # OPPURE usa Visual Studio
 # Build > Rebuild Solution (Release mode)
@@ -61,7 +61,7 @@ Public Shared ReadOnly Property CurrentVersion As String = "1.1.0"  ' Nuova vers
 ```
 
 5. **Carica Files**:
-   - `GestioneFinanzePersonali.exe` (o MSI se disponibile)
+   - `MoneyMind.exe` (o MSI se disponibile)
    - Qualsiasi altro file necessario
 
 6. **Publish release** ✅
