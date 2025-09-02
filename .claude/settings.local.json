@@ -5,7 +5,16 @@
       "Bash(rm:*)",
       "Bash(msbuild:*)",
       "Bash(dotnet build:*)",
-      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" GestioneFinanzePersonaliGestioneFinanzePersonali.vbproj /build Debug)"
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" GestioneFinanzePersonaliGestioneFinanzePersonali.vbproj /build Debug)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" GestioneFinanzePersonaliGestioneFinanzePersonali.vbproj /build Release)",
+      "Bash(\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe\" GestioneFinanzePersonaliGestioneFinanzePersonali.vbproj /p:Configuration=Release)",
+      "Bash(\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\BuildTools\\MSBuild\\Current\\Bin\\MSBuild.exe\" \"GestioneFinanzePersonali\\GestioneFinanzePersonali.vbproj\" /p:Configuration=Release)",
+      "Bash(\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe\" \"GestioneFinanzePersonali\\GestioneFinanzePersonali.vbproj\" /p:Configuration=Release)",
+      "Bash(\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe\" \"GestioneFinanzePersonali.vbproj\" /p:Configuration=Release)",
+      "Bash(\"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe\" \"GestioneFinanzePersonali.vbproj\" /property:Configuration=Release)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" \"C:\\Users\\Collaudo5\\Documents\\GestioneFinanzePersonali\\GestioneFinanzePersonali\\GestioneFinanzePersonali.vbproj\" /build Release /out build.log)",
+      "Bash(dir:*)",
+      "Bash(./GestioneFinanzePersonali.exe)"
     ],
     "deny": [],
     "ask": []
