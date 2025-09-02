@@ -4,6 +4,9 @@ Imports System.IO
 Public Class FormGestionePattern
     Inherits Form
 
+    ' Eventi per notificare cambiamenti ai pattern
+    Public Shared Event PatternsChanged()
+
     Private dgvPattern As DataGridView
     Private btnSalva As Button
     Private btnImportaCsv As Button
@@ -360,6 +363,9 @@ Public Class FormGestionePattern
 
         MessageBox.Show($"{toDeleteIds.Count} pattern eliminati.", "Elimina", MessageBoxButtons.OK, MessageBoxIcon.Information)
         CaricaPattern()
+        
+        ' Notifica che i pattern sono cambiati
+        RaiseEvent PatternsChanged()
     End Sub
 
 

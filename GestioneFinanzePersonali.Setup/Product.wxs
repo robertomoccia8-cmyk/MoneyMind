@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?define ProductName = "Gestione Finanze Personali" ?>
+  <?define ProductVersion = "1.0.0" ?>
+  <?define ProductUpgradeCode = "12345678-1234-1234-1234-123456789012" ?>
+  
+  <Product Id="*" 
+           Name="$(var.ProductName)" 
+           Language="1040" 
+           Version="$(var.ProductVersion)" 
+           Manufacturer="Gestione Finanze" 
+           UpgradeCode="$(var.ProductUpgradeCode)">
+    
+    <Package InstallerVersion="200" 
+             Compressed="yes" 
+             InstallScope="perMachine" 
+             Description="Applicazione per la gestione delle finanze personali"
+             Comments="Sistema completo per il monitoraggio e analisi delle transazioni finanziarie" />
+
+    <MajorUpgrade DowngradeErrorMessage="Una versione più recente di $(var.ProductName) è già installata." />
+    
+    <MediaTemplate EmbedCab="yes" />
+
+    <!-- Definizione delle cartelle -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="$(var.ProductName)" />
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="$(var.ProductName)" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+    </Directory>
+
+    <!-- Componenti dell'applicazione -->
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="ProductComponent" Guid="*">
+        <File Id="MainExecutable" 
+              Source="$(var.GestioneFinanzePersonali.TargetPath)" 
+              Name="GestioneFinanzePersonali.exe"
+              KeyPath="yes">
+          <Shortcut Id="ApplicationStartMenuShortcut" 
+                    Directory="ApplicationProgramsFolder" 
+                    Name="$(var.ProductName)" 
+                    WorkingDirectory="INSTALLFOLDER" 
+                    Icon="AppIcon.exe" 
+                    IconIndex="0" />
+          <Shortcut Id="ApplicationDesktopShortcut" 
+                    Directory="DesktopFolder" 
+                    Name="$(var.ProductName)" 
+                    WorkingDirectory="INSTALLFOLDER" 
+                    Icon="AppIcon.exe" 
+                    IconIndex="0" />
+        </File>
+      </Component>
+      
+      <!-- Configurazione -->
+      <Component Id="ConfigComponent" Guid="*">
+        <File Id="AppConfig" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)GestioneFinanzePersonali.exe.config" 
+              Name="GestioneFinanzePersonali.exe.config" />
+      </Component>
+      
+      <!-- Librerie necessarie -->
+      <Component Id="LibrariesComponent" Guid="*">
+        <!-- Entity Framework -->
+        <File Id="EntityFramework" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)EntityFramework.dll" />
+        <File Id="EntityFrameworkSqlServer" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)EntityFramework.SqlServer.dll" />
+        
+        <!-- Excel Libraries -->
+        <File Id="EPPlus" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)EPPlus.dll" />
+        <File Id="EPPlusInterfaces" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)EPPlus.Interfaces.dll" />
+        
+        <!-- JSON.NET -->
+        <File Id="NewtonsoftJson" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)Newtonsoft.Json.dll" />
+        
+        <!-- SQLite -->
+        <File Id="SystemDataSQLite" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)System.Data.SQLite.dll" />
+        <File Id="SystemDataSQLiteEF6" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)System.Data.SQLite.EF6.dll" />
+        
+        <!-- Charts -->
+        <File Id="LiveChartsCore" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)LiveChartsCore.dll" />
+        <File Id="LiveChartsCoreSkiaSharp" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)LiveChartsCore.SkiaSharpView.dll" />
+        <File Id="LiveChartsCoreWinForms" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)LiveChartsCore.SkiaSharpView.WinForms.dll" />
+        
+        <!-- SkiaSharp -->
+        <File Id="SkiaSharp" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)SkiaSharp.dll" />
+        <File Id="SkiaSharpViews" 
+              Source="$(var.GestioneFinanzePersonali.TargetDir)SkiaSharp.Views.WindowsForms.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Menu Start -->
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="*">
+        <Shortcut Id="UninstallProduct" 
+                  Name="Disinstalla $(var.ProductName)" 
+                  Target="[SystemFolder]msiexec.exe" 
+                  Arguments="/x [ProductCode]" 
+                  Description="Disinstalla $(var.ProductName)" />
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" 
+                       Key="Software\Microsoft\$(var.ProductName)" 
+                       Name="installed" 
+                       Type="integer" 
+                       Value="1" 
+                       KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Feature -->
+    <Feature Id="ProductFeature" Title="$(var.ProductName)" Level="1">
+      <ComponentRef Id="ProductComponent" />
+      <ComponentRef Id="ConfigComponent" />
+      <ComponentRef Id="LibrariesComponent" />
+      <ComponentRef Id="ApplicationShortcut" />
+    </Feature>
+    
+    <!-- Icona dell'applicazione -->
+    <Icon Id="AppIcon.exe" SourceFile="$(var.GestioneFinanzePersonali.TargetPath)" />
+    
+    <!-- Proprietà dell'installer -->
+    <Property Id="ARPPRODUCTICON" Value="AppIcon.exe" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/TUO_USERNAME/GestioneFinanzePersonali" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/TUO_USERNAME/GestioneFinanzePersonali" />
+    <Property Id="ARPNOREPAIR" Value="yes" />
+    <Property Id="ARPNOMODIFY" Value="yes" />
+    
+    <!-- Registry per l'auto-update -->
+    <Component Id="RegistryEntries" Guid="*" Directory="INSTALLFOLDER">
+      <RegistryKey Root="HKLM" Key="SOFTWARE\$(var.ProductName)">
+        <RegistryValue Name="InstallPath" Type="string" Value="[INSTALLFOLDER]" />
+        <RegistryValue Name="Version" Type="string" Value="$(var.ProductVersion)" />
+        <RegistryValue Name="DisplayName" Type="string" Value="$(var.ProductName)" />
+      </RegistryKey>
+    </Component>
+    
+    <!-- Aggiungi alla feature -->
+    <ComponentRef Id="RegistryEntries" />
+    
+  </Product>
+</Wix>

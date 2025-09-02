@@ -190,7 +190,6 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AI\GooglePlacesWrapper.vb" />
     <Compile Include="AI\GptClassificatoreTransazioni.vb" />
     <Compile Include="Classes\Database\DatabaseManager.vb" />
     <Compile Include="Classes\Models\Transazione.vb" />
@@ -288,12 +287,6 @@
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="UserControl1.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.vb">
-      <DependentUpon>UserControl1.vb</DependentUpon>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -304,6 +297,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="GlobalImports.vb" />
+    <Compile Include="Classes\Logging\ILogger.vb" />
+    <Compile Include="Classes\Logging\FileLogger.vb" />
+    <Compile Include="Classes\Logging\LoggerFactory.vb" />
+    <Compile Include="Classes\Security\ISecureConfigurationManager.vb" />
+    <Compile Include="Classes\Security\SecureConfigurationManager.vb" />
+    <Compile Include="Classes\DataAccess\ITransazioneRepository.vb" />
+    <Compile Include="Classes\DataAccess\TransazioneRepository.vb" />
+    <Compile Include="Classes\Business\TransazioneService.vb" />
+    <Compile Include="Classes\Constants\ApplicationConstants.vb" />
+    <Compile Include="Classes\Enums\TransactionEnums.vb" />
+    <Compile Include="Classes\Extensions\StringExtensions.vb" />
+    <Compile Include="Classes\Extensions\DateTimeExtensions.vb" />
+    <Compile Include="Classes\Extensions\LoggerExtensions.vb" />
+    <Compile Include="Classes\Models\VersionInfo.vb" />
+    <Compile Include="Classes\Constants\ApplicationInfo.vb" />
+    <Compile Include="Classes\Services\UpdaterService.vb" />
+    <Compile Include="Classes\Services\BackupService.vb" />
+    <Compile Include="Forms\Updates\FormAggiornamenti.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Updates\FormAggiornamenti.Designer.vb">
+      <DependentUpon>FormAggiornamenti.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Updates\FormGestioneBackup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Updates\FormGestioneBackup.Designer.vb">
+      <DependentUpon>FormGestioneBackup.vb</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -338,14 +361,17 @@
     <EmbeddedResource Include="Forms\Transazioni\FormGestionePattern.resx">
       <DependentUpon>FormGestionePattern.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Updates\FormAggiornamenti.resx">
+      <DependentUpon>FormAggiornamenti.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Updates\FormGestioneBackup.resx">
+      <DependentUpon>FormGestioneBackup.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -4,48 +4,149 @@ Imports System.Globalization
 Imports System.IO
 Imports System.Linq
 Imports System.Text
+Imports System.Threading.Tasks
 Imports ExcelDataReader
 Imports GestioneFinanzePersonali.ImportatoreUniversale
+Imports GestioneFinanzePersonali.Models
+Imports GestioneFinanzePersonali.Logging
 Imports OfficeOpenXml
-' provaaaaaaaaaa
 Public Class FormFinanza
-    Private FiltroAttivo As Boolean = False
-    Private FiltroInizio As Date
-    Private FiltroFine As Date
-    Private FiltroMacro As String = ""
-    Private FiltroCat As String = ""
-    Private filtroParola As String = ""
-    Private FiltroParolaDettagliatoAttivo As Boolean = False
-    Private FiltroParolaDettagliataMacro As String = ""
-    Private FiltroParolaDettagliataCategoria As String = ""
+    Private _isFilterActive As Boolean = False
+    Private _filterStartDate As DateTime
+    Private _filterEndDate As DateTime
+    Private _filterMacroCategory As String = ""
+    Private _filterCategory As String = ""
+    Private _filterSearchTerm As String = ""
+    Private _isDetailedWordFilterActive As Boolean = False
+    Private _detailedFilterMacroCategory As String = ""
+    Private _detailedFilterCategory As String = ""
+    
+    ' Legacy property mappings for backward compatibility
+    Private Property FiltroAttivo As Boolean
+        Get
+            Return _isFilterActive
+        End Get
+        Set(value As Boolean)
+            _isFilterActive = value
+        End Set
+    End Property
+    
+    Private Property FiltroMacro As String
+        Get
+            Return _filterMacroCategory
+        End Get
+        Set(value As String)
+            _filterMacroCategory = value
+        End Set
+    End Property
+    
+    Private Property FiltroCat As String
+        Get
+            Return _filterCategory
+        End Get
+        Set(value As String)
+            _filterCategory = value
+        End Set
+    End Property
+    
+    Private Property filtroParola As String
+        Get
+            Return _filterSearchTerm
+        End Get
+        Set(value As String)
+            _filterSearchTerm = value
+        End Set
+    End Property
+    
+    Private Property FiltroParolaDettagliatoAttivo As Boolean
+        Get
+            Return _isDetailedWordFilterActive
+        End Get
+        Set(value As Boolean)
+            _isDetailedWordFilterActive = value
+        End Set
+    End Property
+    
+    Private Property FiltroParolaDettagliataMacro As String
+        Get
+            Return _detailedFilterMacroCategory
+        End Get
+        Set(value As String)
+            _detailedFilterMacroCategory = value
+        End Set
+    End Property
+    
+    Private Property FiltroParolaDettagliataCategoria As String
+        Get
+            Return _detailedFilterCategory
+        End Get
+        Set(value As String)
+            _detailedFilterCategory = value
+        End Set
+    End Property
+    
+    Private Property FiltroInizio As DateTime
+        Get
+            Return _filterStartDate
+        End Get
+        Set(value As DateTime)
+            _filterStartDate = value
+        End Set
+    End Property
+    
+    Private Property FiltroFine As DateTime
+        Get
+            Return _filterEndDate
+        End Get
+        Set(value As DateTime)
+            _filterEndDate = value
+        End Set
+    End Property
 
-    Private WithEvents dtpMese As New DateTimePicker With {
-    .Format = DateTimePickerFormat.Custom,
-    .CustomFormat = "MM/yyyy",
-    .ShowUpDown = True,
-    .Value = DateTime.Now
-}
+    Private WithEvents _monthDateTimePicker As New DateTimePicker With {
+        .Format = DateTimePickerFormat.Custom,
+        .CustomFormat = "MM/yyyy",
+        .ShowUpDown = True,
+        .Value = DateTime.Now
+    }
 
-    Public Sub ImpostaFiltroParola(parola As String)
-        filtroParola = parola
+    Public Sub SetWordFilter(searchTerm As String)
+        _filterSearchTerm = searchTerm
         CaricaTransazioni()
     End Sub
 
-    Public Sub ImpostaFiltroParolaDettagliato(parola As String, macroCategoria As String, categoria As String)
-        FiltroParolaDettagliatoAttivo = True
-        filtroParola = parola
-        FiltroParolaDettagliataMacro = macroCategoria
-        FiltroParolaDettagliataCategoria = categoria
-        ' RIMUOVI FiltroParolaDettagliataSottoCategoria
+    Public Sub SetDetailedWordFilter(searchTerm As String, macroCategory As String, category As String)
+        _isDetailedWordFilterActive = True
+        _filterSearchTerm = searchTerm
+        _detailedFilterMacroCategory = macroCategory
+        _detailedFilterCategory = category
 
-        ' Reset altri filtri
-        FiltroAttivo = False
+        ' Reset other filters
+        _isFilterActive = False
 
         CaricaTransazioni()
+    End Sub
+
+    ' Legacy method names for backward compatibility
+    Public Sub ImpostaFiltroParola(searchTerm As String)
+        SetWordFilter(searchTerm)
+    End Sub
+    
+    Public Sub ImpostaFiltroParolaDettagliato(searchTerm As String, macroCategory As String, category As String)
+        SetDetailedWordFilter(searchTerm, macroCategory, category)
     End Sub
 
     Private Sub FormFinanza_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ExcelPackage.License.SetNonCommercialPersonal("Gestione Finanze Personali")
+        
+        ' Sottoscrivi agli eventi dei pattern per aggiornare automaticamente la tabella
+        AddHandler FormRaffinaPattern.PatternsChanged, AddressOf OnPatternsChanged
+        AddHandler FormRaffinaPattern.TransactionsClassified, AddressOf OnTransactionsClassified
+        AddHandler FormGestionePattern.PatternsChanged, AddressOf OnPatternsChanged
+        
+        ' Controlla aggiornamenti in background all'avvio
+        CheckForUpdatesAsync()
+        
         Try
             DatabaseManager.InitializeDatabase()
             DatabaseManager.RimuoviSottoCategoriaSchema() ' Rimuovi se esiste
@@ -217,11 +318,6 @@ Public Class FormFinanza
                 MessageBox.Show("Configurazione applicata. I periodi verranno ricalcolati.", "Configurazione Aggiornata", MessageBoxButtons.OK, MessageBoxIcon.Information)
             End If
         End Using
-    End Sub
-
-    ' Se hai un menu strip, aggiungi una voce:
-    Private Sub ImpostazioniStipendioToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        ApriConfigurazioneStipendi()
     End Sub
 
     ' Oppure aggiungi un bottone nell'interfaccia:
@@ -1616,22 +1712,110 @@ Public Class FormFinanza
         End Try
     End Function
 
-    Private Sub panelInserimento_Paint(sender As Object, e As PaintEventArgs) Handles panelInserimento.Paint
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub dgvTransazioni_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvTransazioni.CellContentClick
-
-    End Sub
 
     Private Sub btnAnalisi_Click(sender As Object, e As EventArgs) Handles btnAnalisi.Click
         Using f As New FormAnalisi()
             f.ShowDialog()
         End Using
+    End Sub
+
+    ''' <summary>
+    ''' Controlla aggiornamenti disponibili in background
+    ''' </summary>
+    Private Async Sub CheckForUpdatesAsync()
+        Try
+            ' Esegui il controllo in background per non bloccare l'UI
+            Await Task.Run(Async Function()
+                               Dim logger = LoggerFactory.Instance.Logger
+                               Using updaterService As New UpdaterService(logger)
+                                   Dim updateInfo = Await updaterService.CheckForUpdatesAsync()
+                                   
+                                   If updateInfo IsNot Nothing Then
+                                       ' Torna al thread UI per mostrare la notifica
+                                       Me.Invoke(Sub() ShowUpdateNotification(updateInfo))
+                                   End If
+                               End Using
+                           End Function)
+            
+        Catch ex As Exception
+            ' Log dell'errore ma non mostrare messaggi all'utente (controllo silenzioso)
+            Dim logger = LoggerFactory.Instance.Logger
+            logger.LogWarning("Controllo aggiornamenti fallito (normale se offline)", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Mostra la notifica di aggiornamento disponibile
+    ''' </summary>
+    Private Sub ShowUpdateNotification(updateInfo As VersionInfo)
+        Try
+            Dim result = MessageBox.Show(
+                $"È disponibile una nuova versione dell'applicazione!" & vbCrLf & vbCrLf &
+                $"Versione corrente: {ApplicationInfo.CurrentVersion}" & vbCrLf &
+                $"Nuova versione: {updateInfo.Version}" & vbCrLf &
+                $"Data rilascio: {updateInfo.ReleaseDate:dd/MM/yyyy}" & vbCrLf & vbCrLf &
+                "Visualizzare i dettagli e aggiornare ora?",
+                "Aggiornamento Disponibile",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Information)
+            
+            If result = DialogResult.Yes Then
+                ShowUpdateDialog(updateInfo)
+            End If
+            
+        Catch ex As Exception
+            Dim logger = LoggerFactory.Instance.Logger
+            logger.LogError("Errore durante la visualizzazione della notifica di aggiornamento", ex)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Mostra il dialog dettagliato degli aggiornamenti
+    ''' </summary>
+    Private Sub ShowUpdateDialog(updateInfo As VersionInfo)
+        Try
+            Using updateForm As New FormAggiornamenti(updateInfo)
+                updateForm.ShowDialog(Me)
+            End Using
+        Catch ex As Exception
+            Dim logger = LoggerFactory.Instance.Logger
+            logger.LogError("Errore durante l'apertura del form aggiornamenti", ex)
+            MessageBox.Show("Errore durante l'apertura del pannello aggiornamenti.",
+                          "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    ''' <summary>
+    ''' Controllo manuale aggiornamenti dal bottone
+    ''' </summary>
+    Private Async Sub btnAggiornamenti_Click(sender As Object, e As EventArgs) Handles btnAggiornamenti.Click
+        Try
+            btnAggiornamenti.Enabled = False
+            btnAggiornamenti.Text = "Controllo..."
+            
+            Dim logger = LoggerFactory.Instance.Logger
+            Using updaterService As New UpdaterService(logger)
+                Dim updateInfo = Await updaterService.CheckForUpdatesAsync()
+                
+                If updateInfo IsNot Nothing Then
+                    ShowUpdateDialog(updateInfo)
+                Else
+                    MessageBox.Show("L'applicazione è già aggiornata alla versione più recente.", 
+                                  "Nessun Aggiornamento", 
+                                  MessageBoxButtons.OK, 
+                                  MessageBoxIcon.Information)
+                End If
+            End Using
+            
+        Catch ex As Exception
+            Dim logger = LoggerFactory.Instance.Logger
+            logger.LogError("Errore durante il controllo manuale aggiornamenti", ex)
+            MessageBox.Show("Errore durante il controllo degli aggiornamenti. Verificare la connessione internet.", 
+                          "Errore", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        Finally
+            btnAggiornamenti.Enabled = True
+            btnAggiornamenti.Text = "Aggiornamenti"
+        End Try
     End Sub
 
     Private Sub btnChiudiDettagli_Click(sender As Object, e As EventArgs) Handles btnChiudiDettagli.Click
@@ -1648,6 +1832,43 @@ Public Class FormFinanza
 
         ' Chiude il form per tornare indietro
         Me.Close()
+    End Sub
+
+    ' ===== GESTORI EVENTI PER AGGIORNAMENTO AUTOMATICO TABELLA =====
+    
+    ' Chiamato quando i pattern vengono modificati (aggiunti/eliminati)
+    Private Sub OnPatternsChanged()
+        ' Aggiorna la tabella quando i pattern cambiano
+        If InvokeRequired Then
+            BeginInvoke(New Action(AddressOf OnPatternsChanged))
+            Return
+        End If
+        
+        CaricaTransazioni()
+        AggiornaInfoMensile()
+    End Sub
+    
+    ' Chiamato quando le transazioni vengono classificate automaticamente
+    Private Sub OnTransactionsClassified(count As Integer)
+        ' Aggiorna la tabella quando le transazioni sono state classificate
+        If InvokeRequired Then
+            BeginInvoke(New Action(Of Integer)(AddressOf OnTransactionsClassified), count)
+            Return
+        End If
+        
+        CaricaTransazioni()
+        AggiornaInfoMensile()
+    End Sub
+    
+    ' Pulisce gli eventi quando il form viene chiuso per evitare memory leak
+    Private Sub FormFinanza_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Try
+            RemoveHandler FormRaffinaPattern.PatternsChanged, AddressOf OnPatternsChanged
+            RemoveHandler FormRaffinaPattern.TransactionsClassified, AddressOf OnTransactionsClassified
+            RemoveHandler FormGestionePattern.PatternsChanged, AddressOf OnPatternsChanged
+        Catch
+            ' Ignora errori durante la rimozione degli eventi
+        End Try
     End Sub
 
 End Class

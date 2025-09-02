@@ -6,6 +6,8 @@ Imports System.Threading.Tasks
 Imports System.Globalization
 Imports System.Linq
 Imports System.Text.RegularExpressions
+Imports System.Data.SQLite
+Imports GestioneFinanzePersonali.Models
 
 Public Class GptClassificatoreTransazioni
     Implements IDisposable
@@ -46,9 +48,10 @@ Public Class GptClassificatoreTransazioni
 
         ' Carica la chiave dal database invece che dal config
         _apiKey = GestoreApiKeys.CaricaChiaveApi("OpenAI")
+        Debug.WriteLine($"DEBUG: Chiave OpenAI caricata: {If(String.IsNullOrEmpty(_apiKey), "VUOTA", $"{_apiKey.Substring(0, Math.Min(10, _apiKey.Length))}...")}")
 
         If String.IsNullOrEmpty(_apiKey) Then
-            ' Non solleva eccezione qui, la gestisce al momento dell'uso
+            Debug.WriteLine("DEBUG: ERRORE - Chiave OpenAI è vuota!")
             Return
         End If
 
@@ -82,13 +85,42 @@ Public Class GptClassificatoreTransazioni
         End Function
     End Class
 
+    ' Versione originale mantenuta per compatibilità
     Public Async Function TrovaPatternSimili(parolaChiave As String, patternEsistenti As List(Of String)) As Task(Of List(Of String))
+        Try
+            Dim risultatoAvanzato = Await TrovaPatternSimiliAvanzato(parolaChiave, patternEsistenti)
+            Return risultatoAvanzato.PatternSuggeriti.Select(Function(p) p.Parola).ToList()
+        Catch ex As Exception
+            Return New List(Of String)
+        End Try
+    End Function
+
+    ' Nuova versione avanzata
+    Public Async Function TrovaPatternSimiliAvanzato(parolaChiave As String, patternEsistenti As List(Of String)) As Task(Of RisultatoPatternSimili)
         Try
             Dim prompt = CreaPromptTrovaPattern(parolaChiave, patternEsistenti)
             Dim risposta = Await ChiamaGptApi(prompt)
-            Return ParsePatternSuggeriti(risposta)
+            Return ParsePatternSuggeritiaAvanzato(risposta)
         Catch ex As Exception
-            Return New List(Of String)
+            Return New RisultatoPatternSimili With {
+                .Analisi = "Errore nell'analisi AI: " & ex.Message
+            }
+        End Try
+    End Function
+
+    ' Versione super-avanzata con contesto completo della transazione
+    Public Async Function TrovaPatternSimiliAvanzatoConContesto(parolaChiave As String, patternEsistenti As List(Of String),
+                                                               descrizioneCompleta As String, importo As Decimal, 
+                                                               dataTransazione As Date) As Task(Of RisultatoPatternSimili)
+        Try
+            Dim prompt = CreaPromptTrovaPatternConContesto(parolaChiave, patternEsistenti, 
+                                                          descrizioneCompleta, importo, dataTransazione)
+            Dim risposta = Await ChiamaGptApi(prompt)
+            Return ParsePatternSuggeritiaAvanzato(risposta)
+        Catch ex As Exception
+            Return New RisultatoPatternSimili With {
+                .Analisi = "Errore nell'analisi AI contestuale: " & ex.Message
+            }
         End Try
     End Function
 
@@ -105,17 +137,179 @@ Public Class GptClassificatoreTransazioni
         End Try
     End Function
 
+    ' Nuova versione che accetta contesto transazione completo
+    Public Function CreaPromptTrovaPatternConContesto(parolaChiave As String, patternEsistenti As List(Of String), 
+                                                     Optional descrizioneCompleta As String = "", 
+                                                     Optional importo As Decimal = 0, 
+                                                     Optional dataTransazione As Date = Nothing) As String
+        ' Carica informazioni aggiuntive per ogni pattern
+        Dim patternDettagliati = GetPatternConDettagli(patternEsistenti.Take(30).ToList())
+        
+        ' Analisi contesto temporale
+        Dim contestoTemporale = AnalizzaContestoTemporale(dataTransazione)
+        
+        ' Analisi fascia importo
+        Dim contestoImporto = AnalizzaFasciaImporto(importo)
+        
+        Dim sb As New Text.StringBuilder()
+        sb.AppendLine("🧠 ANALISI SEMANTICA SUPER-AVANZATA - Pattern Simili Intelligenti")
+        sb.AppendLine()
+        sb.AppendLine("📊 CONTESTO TRANSAZIONE:")
+        sb.AppendLine($"• Termine chiave: ""{parolaChiave}""")
+        If Not String.IsNullOrEmpty(descrizioneCompleta) Then
+            sb.AppendLine($"• Descrizione completa: ""{descrizioneCompleta}""")
+        End If
+        If importo <> 0 Then
+            sb.AppendLine($"• Importo: {importo:C2} ({contestoImporto})")
+        End If
+        If dataTransazione <> Nothing Then
+            sb.AppendLine($"• Periodo: {dataTransazione:MMMM yyyy} ({contestoTemporale})")
+        End If
+        sb.AppendLine()
+        
+        sb.AppendLine("📋 PATTERN ESISTENTI ORDINATI PER SUCCESSO:")
+        For Each p In patternDettagliati.Take(20)
+            sb.AppendLine($"• ""{p.Parola}"" → {p.MacroCategoria}/{p.Categoria}")
+            sb.AppendLine($"  Statistiche: Peso {p.Peso}/100, {p.UsoCount} transazioni, Frequenza {p.Frequenza}")
+        Next
+        sb.AppendLine()
+        
+        sb.AppendLine("🎯 COMPITI AVANZATI:")
+        sb.AppendLine("1. ANALISI SEMANTICA: Identifica settore, tipo business, categoria merceologica")
+        sb.AppendLine("2. MATCHING INTELLIGENTE: Non solo similarità ortografica, ma significato e contesto")
+        sb.AppendLine("3. PESO STORICO: Favorisci pattern con alto successo (peso × utilizzo)")
+        sb.AppendLine("4. CONTESTO IMPORTO: Considera la fascia di spesa per suggerimenti più precisi")
+        sb.AppendLine("5. STAGIONALITÀ: Se applicabile, considera periodo dell'anno")
+        sb.AppendLine()
+        
+        sb.AppendLine("📤 FORMATO RISPOSTA JSON:")
+        sb.AppendLine("{")
+        sb.AppendLine("  ""Analisi"": ""[Analisi dettagliata: settore identificato, contesto, ragionamento]"",")
+        sb.AppendLine("  ""PatternSuggeriti"": [")
+        sb.AppendLine("    {""Parola"": ""pattern1"", ""Confidenza"": 95, ""Motivazione"": ""Perché è il migliore""},")
+        sb.AppendLine("    {""Parola"": ""pattern2"", ""Confidenza"": 88, ""Motivazione"": ""Alternativa valida""},")
+        sb.AppendLine("    {""Parola"": ""pattern3"", ""Confidenza"": 75, ""Motivazione"": ""Opzione di backup""}")
+        sb.AppendLine("  ]")
+        sb.AppendLine("}")
+        
+        Return sb.ToString()
+    End Function
+
+    ' Versione semplificata per compatibilità
     Private Function CreaPromptTrovaPattern(parolaChiave As String, patternEsistenti As List(Of String)) As String
-        Dim patternsStr = String.Join(", ", patternEsistenti.Take(20))
-        Return $"Trova i 5 pattern più simili alla parola chiave:
+        Return CreaPromptTrovaPatternConContesto(parolaChiave, patternEsistenti)
+    End Function
 
-PAROLA CHIAVE: ""{parolaChiave}""
-PATTERN ESISTENTI: {patternsStr}
+    ' Classe per pattern dettagliati
+    Public Class PatternDettagliato
+        Public Property Parola As String
+        Public Property MacroCategoria As String
+        Public Property Categoria As String
+        Public Property Peso As Integer
+        Public Property Frequenza As String
+        Public Property UsoCount As Integer
+    End Class
 
-Rispondi con JSON:
-{{
-    ""PatternSuggeriti"": [""p1"",""p2"",""p3"",""p4"",""p5""]
-}}"
+    ' Classe per suggerimenti avanzati con AI
+    Public Class SuggerimentoPatternAvanzato
+        Public Property Parola As String
+        Public Property Confidenza As Integer
+        Public Property Motivazione As String
+        Public Property MacroCategoria As String
+        Public Property Categoria As String
+        Public Property TransazioniPotenziali As Integer
+    End Class
+
+    ' Risultato completo della ricerca pattern simili
+    Public Class RisultatoPatternSimili
+        Public Property Analisi As String
+        Public Property PatternSuggeriti As List(Of SuggerimentoPatternAvanzato)
+        
+        Public Sub New()
+            PatternSuggeriti = New List(Of SuggerimentoPatternAvanzato)
+        End Sub
+    End Class
+
+    ' Ottiene pattern con tutti i dettagli
+    Private Function GetPatternConDettagli(parolePattern As List(Of String)) As List(Of PatternDettagliato)
+        Dim result As New List(Of PatternDettagliato)
+        
+        Try
+            Using conn As New SQLite.SQLiteConnection(DatabaseManager.GetConnectionString())
+                conn.Open()
+                
+                For Each parola In parolePattern
+                    Dim sql As String = "
+                    SELECT Parola, MacroCategoria, Categoria, 
+                           COALESCE(Peso, 50) as Peso, 
+                           COALESCE(Frequenza, 'Occasionale') as Frequenza,
+                           (SELECT COUNT(*) FROM Transazioni WHERE UPPER(Descrizione) LIKE '%' || UPPER(@parola) || '%') as UsoCount
+                    FROM Pattern 
+                    WHERE Parola = @parola 
+                    LIMIT 1"
+                    
+                    Using cmd As New SQLite.SQLiteCommand(sql, conn)
+                        cmd.Parameters.AddWithValue("@parola", parola)
+                        Using reader As SQLite.SQLiteDataReader = cmd.ExecuteReader()
+                            If reader.Read() Then
+                                result.Add(New PatternDettagliato With {
+                                    .Parola = reader.GetString(0),
+                                    .MacroCategoria = reader.GetString(1),
+                                    .Categoria = reader.GetString(2),
+                                    .Peso = reader.GetInt32(3),
+                                    .Frequenza = reader.GetString(4),
+                                    .UsoCount = reader.GetInt32(5)
+                                })
+                            End If
+                        End Using
+                    End Using
+                Next
+            End Using
+        Catch ex As Exception
+            Debug.WriteLine($"Errore GetPatternConDettagli: {ex.Message}")
+        End Try
+        
+        Return result.OrderByDescending(Function(p) p.Peso * p.UsoCount).ToList()
+    End Function
+
+    ' Analizza il contesto temporale per suggerimenti stagionali
+    Private Function AnalizzaContestoTemporale(dataTransazione As Date) As String
+        If dataTransazione = Nothing Then Return "N/A"
+        
+        Dim mese = dataTransazione.Month
+        Select Case mese
+            Case 12, 1, 2
+                Return "Periodo invernale - possibili spese riscaldamento, regali, vacanze"
+            Case 3, 4, 5
+                Return "Periodo primaverile - possibili spese giardinaggio, pulizie, abbigliamento"
+            Case 6, 7, 8
+                Return "Periodo estivo - possibili spese vacanze, condizionamento, mare"
+            Case 9, 10, 11
+                Return "Periodo autunnale - possibili spese rientro, scuola, riscaldamento"
+            Case Else
+                Return "Periodo generico"
+        End Select
+    End Function
+
+    ' Analizza la fascia di importo per contestualizzare i suggerimenti
+    Private Function AnalizzaFasciaImporto(importo As Decimal) As String
+        Dim abs = Math.Abs(importo)
+        Select Case abs
+            Case 0 To 10
+                Return "Spesa molto piccola - snack, caffè, piccoli acquisti"
+            Case 10 To 50
+                Return "Spesa piccola - pranzi, trasporti, piccole necessità"
+            Case 50 To 150
+                Return "Spesa media - ristoranti, abbigliamento, spesa settimanale"
+            Case 150 To 500
+                Return "Spesa significativa - elettronica, riparazioni, grandi acquisti"
+            Case 500 To 2000
+                Return "Spesa importante - elettrodomestici, vacanze, rate"
+            Case Is > 2000
+                Return "Spesa molto importante - auto, immobili, investimenti"
+            Case Else
+                Return "Fascia non determinata"
+        End Select
     End Function
 
     Private Function CreaPromptCreaPattern(descrizione As String, importo As Decimal, macroCategorie As List(Of String)) As String
@@ -187,15 +381,20 @@ Rispondi ESATTAMENTE in JSON:
     Public Async Function AnalizzaTransazione(descrizione As String, importo As Decimal) As Task(Of SuggerimentoClassificazione)
         ' 1) Chiamata AI
         Dim suggerimento = Await AnalizzaConIA(descrizione, importo)
+        Debug.WriteLine($"DEBUG: Dopo AnalizzaConIA - IsValid: {suggerimento?.IsValid}, NomeSocieta: '{suggerimento?.NomeSocieta}', ParolaChiave: '{suggerimento?.ParolaChiave}'")
 
         ' 2) Se AI fallisce, fallback Google
         If Not EsitoValidoCompleto(suggerimento) Then
+            Debug.WriteLine("DEBUG: EsitoValidoCompleto è False, provando fallback Google")
             If ApiValidator.ControllaSeMancaChiaveApi("GooglePlaces") Then
                 ApiValidator.ChiediAperturaImpostazioni("Google Places")
             End If
             Dim daWeb = Await RicercaWebPerDescrizioneAsync(descrizione)
             If daWeb IsNot Nothing AndAlso daWeb.IsValid Then
                 suggerimento = daWeb
+                Debug.WriteLine("DEBUG: Fallback Google riuscito")
+            Else
+                Debug.WriteLine("DEBUG: Fallback Google fallito")
             End If
         End If
 
@@ -219,9 +418,20 @@ Rispondi ESATTAMENTE in JSON:
 
     ' Controllo di validità "completo" per esigere almeno nome o keyword
     Private Function EsitoValidoCompleto(s As SuggerimentoClassificazione) As Boolean
-        If s Is Nothing OrElse Not s.IsValid Then Return False
-        If String.IsNullOrWhiteSpace(s.ParolaChiave) Then Return False
-        If String.IsNullOrWhiteSpace(s.NomeSocieta) AndAlso String.IsNullOrWhiteSpace(s.SommarioSocieta) Then Return False
+        If s Is Nothing Then
+            Debug.WriteLine("DEBUG: EsitoValidoCompleto - suggerimento è Nothing")
+            Return False
+        End If
+        If Not s.IsValid Then
+            Debug.WriteLine("DEBUG: EsitoValidoCompleto - IsValid è False")
+            Return False
+        End If
+        If String.IsNullOrWhiteSpace(s.ParolaChiave) Then
+            Debug.WriteLine("DEBUG: EsitoValidoCompleto - ParolaChiave è vuota")
+            Return False
+        End If
+        ' Rimosso il controllo rigido su NomeSocieta/SommarioSocieta - basta avere ParolaChiave
+        Debug.WriteLine("DEBUG: EsitoValidoCompleto - VALIDO")
         Return True
     End Function
 
@@ -255,15 +465,15 @@ Rispondi ESATTAMENTE in JSON:
         sb.AppendLine("Esempi storici (descrizione → ParolaChiave estrapolata → pattern estratto):")
         sb.AppendLine(esempi)
         sb.AppendLine()
-        sb.AppendLine("Regole:")
-        sb.AppendLine("- Se nella descrizione compare un nome di società, impostalo COME NomeSocieta E SEMPRE come ParolaChiave.")
-        sb.AppendLine("- Aggiungi 'SommarioSocieta': un breve testo su cosa fa la società.")
-        sb.AppendLine("- MacroCategoria e Categoria devono riflettere il settore di attività della società.")
-        sb.AppendLine("- IMPORTANTE -> Se non c’è nome società, ParolaChiave deve essere ESATTAMENTE una parola PRESENTE nella descrizione.")
-        sb.AppendLine("- Necessita, Frequenza e Stagionalita: scegli ESCLUSIVAMENTE da quelli elencati.")
-        sb.AppendLine("- Peso sempre 75.")
-        sb.AppendLine("- Non lasciare mai vuoti NomeSocieta, ParolaChiave o DescrizioneAttivita.")
-        sb.AppendLine("- Confidenza 0–100; Motivazione breve.")
+        sb.AppendLine("REGOLE OBBLIGATORIE:")
+        sb.AppendLine("1. NOME SOCIETÀ: Se presente un nome di azienda nella descrizione, impostalo ESATTAMENTE come NomeSocieta E come ParolaChiave.")
+        sb.AppendLine("2. SOMMARIO SOCIETÀ: Sempre fornire una breve descrizione dell'attività dell'azienda.")
+        sb.AppendLine("3. DESCRIZIONE ATTIVITÀ: Mai lasciare vuoto, descrivere sempre l'attività.")
+        sb.AppendLine("4. PAROLA CHIAVE: Se non c'è società, deve essere una parola SPECIFICA dalla descrizione (non generica).")
+        sb.AppendLine("5. MACRO/CATEGORIE: USA SOLO quelle negli elenchi sopra. Se non trovi corrispondenza esatta, scegli la più simile.")
+        sb.AppendLine("6. VINCOLI ASSOLUTI: MacroCategoria e Categoria DEVONO essere dalla lista fornita, mai inventare.")
+        sb.AppendLine("7. ALTRI CAMPI: Necessita/Frequenza/Stagionalita solo da elenchi forniti.")
+        sb.AppendLine("8. Peso sempre 75, Confidenza 0-100.")
         sb.AppendLine()
         sb.AppendLine("Formato JSON di risposta:")
         sb.AppendLine("{")
@@ -360,7 +570,7 @@ Rispondi ESATTAMENTE in JSON:
         Dim doc = JsonDocument.Parse(json).RootElement
 
         s.NomeSocieta = If(doc.TryGetProperty("NomeSocieta", Nothing), doc.GetProperty("NomeSocieta").GetString(), "")
-        s.SommarioSocieta = If(doc.TryGetProperty("SommarioSocietà", Nothing), doc.GetProperty("SommarioSocietà").GetString(), "")
+        s.SommarioSocieta = If(doc.TryGetProperty("SommarioSocieta", Nothing), doc.GetProperty("SommarioSocieta").GetString(), "")
         s.DescrizioneAttivita = If(doc.TryGetProperty("DescrizioneAttivita", Nothing), doc.GetProperty("DescrizioneAttivita").GetString(), "")
         s.ParolaChiave = If(doc.TryGetProperty("ParolaChiave", Nothing), doc.GetProperty("ParolaChiave").GetString(), "")
         s.MacroCategoria = If(doc.TryGetProperty("MacroCategoria", Nothing), doc.GetProperty("MacroCategoria").GetString(), "")
@@ -478,19 +688,30 @@ Rispondi ESATTAMENTE in JSON:
                     lastPromptTokens = usage.GetProperty("prompt_tokens").GetInt32()
                     lastCompletionTokens = usage.GetProperty("completion_tokens").GetInt32()
                     lastTotalTokens = usage.GetProperty("total_tokens").GetInt32()
+                    Debug.WriteLine($"DEBUG: Token tracciati - Input:{lastPromptTokens}, Output:{lastCompletionTokens}, Totale:{lastTotalTokens}")
+                Else
+                    Debug.WriteLine("DEBUG: ERRORE - Nessun campo usage nella risposta API")
                 End If
 
                 ' Estrai e pulisci content
                 Dim contentStr = root.GetProperty("choices")(0).GetProperty("message").GetProperty("content").GetString()
+                Debug.WriteLine($"DEBUG: Risposta AI raw: {contentStr}")
                 Dim jsonPulito = PulisciJsonResponse(contentStr)
+                Debug.WriteLine($"DEBUG: JSON pulito: {jsonPulito}")
                 Dim s = ParseSuggerimentoFromJson(jsonPulito)
 
                 ' Validazione soft
                 s.IsValid = EsitoValido(descrizione, s)
+                Debug.WriteLine($"DEBUG: Dopo EsitoValido - IsValid: {s.IsValid}")
                 Return s
             End Using
-        Catch
-            Return New SuggerimentoClassificazione With {.IsValid = False}
+        Catch ex As Exception
+            ' Log dell'errore per debug
+            Debug.WriteLine($"Errore in AnalizzaConIA: {ex.Message}")
+            Return New SuggerimentoClassificazione With {
+                .IsValid = False,
+                .Motivazione = $"Errore analisi AI: {ex.Message}"
+            }
         End Try
     End Function
 
@@ -537,15 +758,79 @@ Rispondi ESATTAMENTE in JSON:
 
         If Not found Then Return False
 
-        ' Imposta defaults se mancanti
-        If String.IsNullOrWhiteSpace(s.MacroCategoria) Then s.MacroCategoria = "Altro"
-        If String.IsNullOrWhiteSpace(s.Categoria) Then s.Categoria = "Altro"
-        If String.IsNullOrWhiteSpace(s.Necessita) Then s.Necessita = "Non essenziale"
-        If String.IsNullOrWhiteSpace(s.Frequenza) Then s.Frequenza = "Occasionale"
-        If String.IsNullOrWhiteSpace(s.Stagionalita) Then s.Stagionalita = "Annuale"
+        ' Imposta defaults se mancanti, ma prova prima a mappare sui valori esistenti
+        If String.IsNullOrWhiteSpace(s.MacroCategoria) Then 
+            s.MacroCategoria = TrovaCategoriaSimilare(GetMacroCategorieEsistenti(), "Altro")
+        End If
+        If String.IsNullOrWhiteSpace(s.Categoria) Then 
+            s.Categoria = TrovaCategoriaSimilare(GetCategorieEsistenti(), "Altro")
+        End If
+        If String.IsNullOrWhiteSpace(s.Necessita) Then 
+            s.Necessita = TrovaCategoriaSimilare(GetNecessitaEsistenti(), "Base")
+        End If
+        If String.IsNullOrWhiteSpace(s.Frequenza) Then 
+            s.Frequenza = TrovaCategoriaSimilare(GetFrequenzaEsistenti(), "Occasionale")
+        End If
+        If String.IsNullOrWhiteSpace(s.Stagionalita) Then 
+            s.Stagionalita = TrovaCategoriaSimilare(GetStagionalitaEsistenti(), "Annuale")
+        End If
         s.Peso = 75
 
+        ' Validazione finale: assicurati che le categorie siano valide
+        ValidaECorreggiCategorie(s)
+
         Return True
+    End Function
+
+    ' Valida e corregge le categorie per assicurarsi che siano dalle liste esistenti
+    Private Sub ValidaECorreggiCategorie(s As SuggerimentoClassificazione)
+        Dim macroEsistenti = GetMacroCategorieEsistenti()
+        Dim catEsistenti = GetCategorieEsistenti()
+        Dim necEsistenti = GetNecessitaEsistenti()
+        Dim freqEsistenti = GetFrequenzaEsistenti()
+        Dim stagEsistenti = GetStagionalitaEsistenti()
+
+        ' Verifica MacroCategoria
+        If Not macroEsistenti.Any(Function(x) String.Equals(x, s.MacroCategoria, StringComparison.OrdinalIgnoreCase)) Then
+            s.MacroCategoria = TrovaCategoriaSimilare(macroEsistenti, "Altro")
+        End If
+
+        ' Verifica Categoria
+        If Not catEsistenti.Any(Function(x) String.Equals(x, s.Categoria, StringComparison.OrdinalIgnoreCase)) Then
+            s.Categoria = TrovaCategoriaSimilare(catEsistenti, "Altro")
+        End If
+
+        ' Verifica Necessita
+        If Not necEsistenti.Any(Function(x) String.Equals(x, s.Necessita, StringComparison.OrdinalIgnoreCase)) Then
+            s.Necessita = TrovaCategoriaSimilare(necEsistenti, "Base")
+        End If
+
+        ' Verifica Frequenza
+        If Not freqEsistenti.Any(Function(x) String.Equals(x, s.Frequenza, StringComparison.OrdinalIgnoreCase)) Then
+            s.Frequenza = TrovaCategoriaSimilare(freqEsistenti, "Occasionale")
+        End If
+
+        ' Verifica Stagionalita
+        If Not stagEsistenti.Any(Function(x) String.Equals(x, s.Stagionalita, StringComparison.OrdinalIgnoreCase)) Then
+            s.Stagionalita = TrovaCategoriaSimilare(stagEsistenti, "Annuale")
+        End If
+    End Sub
+
+    ' Funzione helper per trovare categoria simile o fallback
+    Private Function TrovaCategoriaSimilare(listaEsistenti As List(Of String), fallback As String) As String
+        If listaEsistenti IsNot Nothing AndAlso listaEsistenti.Count > 0 Then
+            ' Cerca "Altro" se esiste
+            Dim altro = listaEsistenti.FirstOrDefault(Function(x) x.ToLowerInvariant().Contains("altro"))
+            If altro IsNot Nothing Then Return altro
+            
+            ' Cerca fallback se esiste  
+            Dim fb = listaEsistenti.FirstOrDefault(Function(x) x.ToLowerInvariant().Contains(fallback.ToLowerInvariant()))
+            If fb IsNot Nothing Then Return fb
+            
+            ' Altrimenti prendi il primo disponibile
+            Return listaEsistenti.First()
+        End If
+        Return fallback
     End Function
 
     ' Fallback minimo quando IA e web non aiutano
@@ -586,17 +871,23 @@ Rispondi ESATTAMENTE in JSON:
             Return m.Groups(1).Value.Trim()
         End If
 
-        ' 2) Fallback token-by-token: escludi sigle di paese e città
+        ' 2) Fallback token-by-token: escludi sigle di paese, città, date e codici
         Dim stopWords As New HashSet(Of String)(StringComparer.OrdinalIgnoreCase) From {
-        "POS", "EUROZONA", "PAGAMENTO", "OPERAZIONE",
-        "ITA", "EUR", "SA", "PAESTUM", "AGROPOLI"
+        "POS", "EUROZONA", "PAGAMENTO", "OPERAZIONE", "DEL", "CARTA",
+        "ITA", "EUR", "SA", "PAESTUM", "AGROPOLI", "MARINO", "NOLA"
     }
+        
+        ' Pattern per riconoscere date (DD.MM.YY)
+        Dim datePattern As String = "\d{1,2}\.\d{1,2}\.\d{2,4}"
 
         Dim tokens = descr.ToUpperInvariant() _
         .Split({" "c}, StringSplitOptions.RemoveEmptyEntries) _
-        .Select(Function(t) t.Trim("'"c, """"c, "."c, ","c)) _
+        .Select(Function(t) t.Trim("'"c, """"c, "."c, ","c, "*"c)) _
         .Where(Function(t) t.Length > 2) _
         .Where(Function(t) Not stopWords.Contains(t)) _
+        .Where(Function(t) Not Regex.IsMatch(t, datePattern)) _
+        .Where(Function(t) Not Regex.IsMatch(t, "\*\d+")) _
+        .Where(Function(t) Not Regex.IsMatch(t, "\d{1,2}:\d{2}")) _
         .ToList()
 
         If Not tokens.Any() Then
@@ -738,6 +1029,7 @@ Rispondi ESATTAMENTE in JSON:
         End Try
     End Function
 
+    ' Versione originale mantenuta
     Private Function ParsePatternSuggeriti(rispostaGpt As String) As List(Of String)
         Try
             Dim jsonPulito = PulisciJsonResponse(rispostaGpt)
@@ -751,6 +1043,94 @@ Rispondi ESATTAMENTE in JSON:
             Return list
         Catch
             Return New List(Of String)
+        End Try
+    End Function
+
+    ' Nuova funzione di parsing avanzata
+    Private Function ParsePatternSuggeritiaAvanzato(rispostaGpt As String) As RisultatoPatternSimili
+        Dim risultato As New RisultatoPatternSimili()
+        
+        Try
+            Dim jsonPulito = PulisciJsonResponse(rispostaGpt)
+            Debug.WriteLine($"JSON Parse Avanzato: {jsonPulito}")
+            Dim root = JsonDocument.Parse(jsonPulito).RootElement
+            
+            ' Estrai analisi
+            If root.TryGetProperty("Analisi", Nothing) Then
+                risultato.Analisi = root.GetProperty("Analisi").GetString()
+            End If
+            
+            ' Estrai pattern suggeriti
+            If root.TryGetProperty("PatternSuggeriti", Nothing) Then
+                For Each el In root.GetProperty("PatternSuggeriti").EnumerateArray()
+                    Dim suggerimento As New SuggerimentoPatternAvanzato()
+                    
+                    If el.TryGetProperty("Parola", Nothing) Then
+                        suggerimento.Parola = el.GetProperty("Parola").GetString()
+                    End If
+                    
+                    If el.TryGetProperty("Confidenza", Nothing) Then
+                        suggerimento.Confidenza = el.GetProperty("Confidenza").GetInt32()
+                    End If
+                    
+                    If el.TryGetProperty("Motivazione", Nothing) Then
+                        suggerimento.Motivazione = el.GetProperty("Motivazione").GetString()
+                    End If
+                    
+                    ' Arricchisci con dati dal database
+                    If Not String.IsNullOrWhiteSpace(suggerimento.Parola) Then
+                        Dim dettagli = CaricaDettagliPattern(suggerimento.Parola)
+                        suggerimento.MacroCategoria = dettagli.Macro
+                        suggerimento.Categoria = dettagli.Cat
+                        suggerimento.TransazioniPotenziali = ContaTransazioniPotenziali(suggerimento.Parola)
+                    End If
+                    
+                    risultato.PatternSuggeriti.Add(suggerimento)
+                Next
+            End If
+            
+        Catch ex As Exception
+            Debug.WriteLine($"Errore parsing avanzato: {ex.Message}")
+            risultato.Analisi = $"Errore nel parsing: {ex.Message}"
+        End Try
+        
+        Return risultato
+    End Function
+
+    ' Carica dettagli di un pattern dal database
+    Private Function CaricaDettagliPattern(parola As String) As (Macro As String, Cat As String)
+        Try
+            Using conn As New SQLiteConnection(DatabaseManager.GetConnectionString())
+                conn.Open()
+                Dim sql As String = "SELECT MacroCategoria, Categoria FROM Pattern WHERE Parola = @p LIMIT 1"
+                Using cmd As New SQLiteCommand(sql, conn)
+                    cmd.Parameters.AddWithValue("@p", parola)
+                    Using reader = cmd.ExecuteReader()
+                        If reader.Read() Then
+                            Return (reader.GetString(0), reader.GetString(1))
+                        End If
+                    End Using
+                End Using
+            End Using
+        Catch ex As Exception
+            Debug.WriteLine($"Errore CaricaDettagliPattern: {ex.Message}")
+        End Try
+        Return ("", "")
+    End Function
+
+    ' Conta quante transazioni potrebbero essere classificate con questo pattern
+    Private Function ContaTransazioniPotenziali(parola As String) As Integer
+        Try
+            Using conn As New SQLiteConnection(DatabaseManager.GetConnectionString())
+                conn.Open()
+                Dim query = "SELECT COUNT(*) FROM Transazioni WHERE (MacroCategoria IS NULL OR MacroCategoria = '') AND UPPER(Descrizione) LIKE @pattern"
+                Using cmd As New SQLiteCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@pattern", $"%{parola.ToUpper()}%")
+                    Return Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch
+            Return 0
         End Try
     End Function
 

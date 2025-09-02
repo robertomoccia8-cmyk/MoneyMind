@@ -2,6 +2,7 @@
 Imports System.IO
 Imports System.Text.Json
 Imports System.Diagnostics
+Imports GestioneFinanzePersonali.Models
 
 Public Class FormGestioneSetCategorie
 
@@ -11,7 +12,7 @@ Public Class FormGestioneSetCategorie
         Public Property Categoria As String
         Public Property NumeroPattern As Integer
         Public Property NumeroTransazioni As Integer
-        Public Property UltimoUtilizzo As Date?
+        Public Property UltimoUtilizzo As Date
         Public Property Parole As List(Of String)
 
         Public Sub New()

@@ -3,11 +3,16 @@ Imports System.Security.Cryptography
 Imports System.Text
 Imports System.Text.Json
 Imports GestioneFinanzePersonali.GptClassificatoreTransazioni
+Imports GestioneFinanzePersonali.Models
 
 Public Class FormRaffinaPattern
 
     ' VARIABILI PER INTELLIGENZA ARTIFICIALI TRANSAZIONI
     Private gptClassificatore As GptClassificatoreTransazioni
+    
+    ' Eventi per notificare cambiamenti ai pattern
+    Public Shared Event PatternsChanged()
+    Public Shared Event TransactionsClassified(count As Integer)
     Private btnAIAssistita As Button
     Private panelAI As Panel
     Private lblAIStatus As Label
@@ -676,15 +681,18 @@ Public Class FormRaffinaPattern
 
         Try
             ' 5) Flusso unico: AI → Google → fallback minimo
+            Debug.WriteLine($"DEBUG FORM: Chiamando AnalizzaTransazione con: '{descr}', importo: {importo}")
             Dim suggerimento = Await gptClassificatore.AnalizzaTransazione(descr, importo)
 
             ' 6) Report token e costo
             Dim report = gptClassificatore.GetResocontoToken()
+            Debug.WriteLine($"DEBUG FORM: Report token: {report}")
             MessageBox.Show(report, "Resoconto Token e Costo", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             ' 7) Verifica risultato
+            Debug.WriteLine($"DEBUG FORM: Suggerimento ricevuto - IsValid: {suggerimento?.IsValid}, NomeSocieta: '{suggerimento?.NomeSocieta}', ParolaChiave: '{suggerimento?.ParolaChiave}'")
             If suggerimento Is Nothing OrElse Not suggerimento.IsValid Then
-                MessageBox.Show("Impossibile ottenere suggerimento. Riprova più tardi.", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                MessageBox.Show($"Impossibile ottenere suggerimento. IsValid: {suggerimento?.IsValid}, Motivazione: {suggerimento?.Motivazione}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Warning)
                 Return
             End If
 
@@ -789,7 +797,7 @@ Public Class FormRaffinaPattern
             btnAIAssistita.Enabled = False
             btnTrovaSimiliAI.Enabled = False
             btnCreaPatternAI.Enabled = False
-            lblAIStatus.Text = "Ricerca pattern simili con AI..."
+            lblAIStatus.Text = "Analisi semantica AI in corso..."
             lblAIStatus.ForeColor = Color.RoyalBlue
 
             ' Lista pattern esistenti
@@ -804,8 +812,31 @@ Public Class FormRaffinaPattern
                 Return
             End If
 
-            ' Chiamata AI
-            Dim suggeriti As List(Of String) = Await gptClassificatore.TrovaPatternSimili(parolaBase, tutti)
+            ' Prepara contesto completo della transazione
+            Dim descrizioneCompleta As String = ""
+            Dim importoTransazione As Decimal = 0
+            Dim dataTransazione As Date = Nothing
+            
+            If dgvTransazioniNonClassificate.SelectedRows.Count > 0 Then
+                Dim row = dgvTransazioniNonClassificate.SelectedRows(0)
+                descrizioneCompleta = If(row.Cells("Descrizione").Value?.ToString(), "")
+                
+                If dgvTransazioniNonClassificate.Columns.Contains("Importo") Then
+                    Decimal.TryParse(row.Cells("Importo").Value?.ToString(), importoTransazione)
+                End If
+                
+                ' Prova a ottenere la data se disponibile (potrebbe essere in una colonna nascosta o nel database)
+                If dgvTransazioniNonClassificate.Columns.Contains("Data") Then
+                    DateTime.TryParse(row.Cells("Data").Value?.ToString(), dataTransazione)
+                Else
+                    ' Se non c'è colonna Data visibile, usa data corrente come approssimazione
+                    dataTransazione = Date.Now
+                End If
+            End If
+
+            ' Chiamata AI super-avanzata con contesto completo
+            Dim risultato = Await gptClassificatore.TrovaPatternSimiliAvanzatoConContesto(
+                parolaBase, tutti, descrizioneCompleta, importoTransazione, dataTransazione)
 
             ' Ripristina UI
             progBarAI.Visible = False
@@ -813,45 +844,14 @@ Public Class FormRaffinaPattern
             btnTrovaSimiliAI.Enabled = True
             btnCreaPatternAI.Enabled = True
 
-            If suggeriti Is Nothing OrElse suggeriti.Count = 0 Then
+            If risultato Is Nothing OrElse risultato.PatternSuggeriti.Count = 0 Then
                 lblAIStatus.Text = "Nessun pattern simile trovato dall'AI."
                 lblAIStatus.ForeColor = Color.DarkOrange
                 Return
             End If
 
-            ' Mostra scelta utente
-            Dim elenco As String = String.Join(vbCrLf, suggeriti.Select(Function(s, i) $"{i + 1}) {s}"))
-            Dim msg As String = "Pattern simili trovati:" & vbCrLf & elenco & vbCrLf & vbCrLf & "Vuoi applicare il primo suggerimento?"
-            Dim res = MessageBox.Show(msg, "Suggerimenti AI", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question)
-
-            If res = DialogResult.Yes Then
-                Dim scelto As String = suggeriti(0)
-                txtParola.Text = scelto
-                Dim dett = CaricaDettagliPattern(scelto)
-                If Not String.IsNullOrWhiteSpace(dett.Macro) Then txtMacroCategoria.Text = dett.Macro
-                If Not String.IsNullOrWhiteSpace(dett.Cat) Then txtCategoria.Text = dett.Cat
-                lblAIStatus.Text = "Pattern applicato dai suggerimenti AI."
-                lblAIStatus.ForeColor = Color.DarkGreen
-            ElseIf res = DialogResult.No Then
-                ' L'utente sceglie manualmente quale tra i suggeriti applicare
-                Dim scelta = InputBox("Digita l'indice del pattern da applicare (1..N):", "Seleziona pattern", "1")
-                Dim idx As Integer
-                If Integer.TryParse(scelta, idx) AndAlso idx >= 1 AndAlso idx <= suggeriti.Count Then
-                    Dim scelto As String = suggeriti(idx - 1)
-                    txtParola.Text = scelto
-                    Dim dett = CaricaDettagliPattern(scelto)
-                    If Not String.IsNullOrWhiteSpace(dett.Macro) Then txtMacroCategoria.Text = dett.Macro
-                    If Not String.IsNullOrWhiteSpace(dett.Cat) Then txtCategoria.Text = dett.Cat
-                    lblAIStatus.Text = "Pattern applicato (scelto manualmente)."
-                    lblAIStatus.ForeColor = Color.DarkGreen
-                Else
-                    lblAIStatus.Text = "Indice non valido o annullato."
-                    lblAIStatus.ForeColor = Color.Gray
-                End If
-            Else
-                lblAIStatus.Text = "Operazione annullata."
-                lblAIStatus.ForeColor = Color.Gray
-            End If
+            ' Mostra risultato con interfaccia avanzata
+            MostraRisultatoPatternAvanzato(risultato)
 
         Catch ex As Exception
             progBarAI.Visible = False
@@ -961,53 +961,62 @@ Public Class FormRaffinaPattern
         End If
 
         Try
+            ' Salva i valori prima di pulire i campi
+            Dim parolaPattern = txtParola.Text.Trim()
+            Dim macroCategoria = txtMacroCategoria.Text.Trim()
+            Dim categoria = txtCategoria.Text.Trim()
+
             ' 1) Salva il pattern nel database
             SalvaPattern()
 
-            ' 2) Log e pulizia
-            ScriviLogPatternManuale()
-            PulisciCampiPattern()
+            ' 2) Notifica che i pattern sono cambiati
+            RaiseEvent PatternsChanged()
 
-            ' 3) Chiedi conferma per classificare la transazione appena processata
+            ' 3) Log e pulizia
+            ScriviLogPatternManuale()
+            
+            ' 3) Conta quante transazioni verranno classificate con questo pattern
+            Dim numeroTransazioni = ContaTransazioniPerPattern(parolaPattern)
+            
+            ' 4) Pulisci i campi dopo aver contato
+            PulisciCampiPattern()
+            
+            ' 5) Chiedi conferma per classificare tutte le transazioni che matchano
             Dim conferma = MessageBox.Show(
             "Pattern aggiunto con successo!" & vbCrLf & vbCrLf &
-            "Vuoi classificare ORA questa transazione (" & transazioneSelezionataID & ")?",
-            "Classifica transazione",
+            $"Vuoi classificare ORA tutte le transazioni che contengono '{parolaPattern}'?" & vbCrLf &
+            $"Verranno classificate {numeroTransazioni} transazione/i.",
+            "Classifica transazioni",
             MessageBoxButtons.YesNo,
             MessageBoxIcon.Question)
 
             If conferma = DialogResult.Yes Then
-                ' Applica la classificazione sul DB per la transazione corrente
-                Using conn As New SQLite.SQLiteConnection(DatabaseManager.GetConnectionString())
-                    conn.Open()
-                    Dim query As String = "
-                    UPDATE Transazioni
-                    SET Parola = @parola,
-                        MacroCategoria = @macro,
-                        Categoria = @cat,
-                        Necessita = @necessita,
-                        Frequenza = @frequenza,
-                        Stagionalita = @stagionalita,
-                        Peso = @peso
-                    WHERE ID = @id;"
-                    Using cmd As New SQLite.SQLiteCommand(query, conn)
-                        cmd.Parameters.AddWithValue("@parola", txtParola.Text.Trim())
-                        cmd.Parameters.AddWithValue("@macro", txtMacroCategoria.Text.Trim())
-                        cmd.Parameters.AddWithValue("@cat", txtCategoria.Text.Trim())
-                        cmd.Parameters.AddWithValue("@necessita", If(cmbNecessita.SelectedItem?.ToString(), ""))
-                        cmd.Parameters.AddWithValue("@frequenza", If(cmbFrequenza.SelectedItem?.ToString(), ""))
-                        cmd.Parameters.AddWithValue("@stagionalita", If(cmbStagionalita.SelectedItem?.ToString(), ""))
-                        cmd.Parameters.AddWithValue("@peso", peso)
-                        cmd.Parameters.AddWithValue("@id", transazioneSelezionataID)
-                        cmd.ExecuteNonQuery()
-                    End Using
-                End Using
+                ' Usa il classificatore per applicare il nuovo pattern a tutte le transazioni
+                Dim transazioniClassificate = ClassificaTransazioniConNuovoPattern()
+                
+                ' Ricarica la lista delle transazioni non classificate
+                CaricaTransazioniNonClassificate()
+                
+                If transazioniClassificate > 0 Then
+                    MessageBox.Show($"Successo! Classificate {transazioniClassificate} transazioni." & vbCrLf &
+                                  "La tabella è stata aggiornata.", 
+                                  "Classificazione completata", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    
+                    ' Notifica il FormFinanza che le transazioni sono state classificate
+                    RaiseEvent TransactionsClassified(transazioniClassificate)
+                Else
+                    MessageBox.Show("Nessuna transazione è stata classificata.", 
+                                  "Avviso", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            Else
+                MessageBox.Show("Pattern aggiunto. Per classificare le transazioni puoi usare il pulsante 'Classifica Categorie' nel FormFinanza.", 
+                              "Pattern salvato", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ' Ricarica la tabella comunque per aggiornare la vista
+                CaricaTransazioniNonClassificate()
             End If
 
-            ' 4) Ricarica la lista delle transazioni non classificate
-            CaricaTransazioniNonClassificate()
-
-            MessageBox.Show("Operazione completata.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            ' Reset della selezione
+            transazioneSelezionataID = -1
         Catch ex As Exception
             MessageBox.Show("Errore durante il salvataggio: " & ex.Message, "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -1093,4 +1102,113 @@ Public Class FormRaffinaPattern
     Private txtPeso As TextBox
     Private WithEvents cmbCombinazioni As ComboBox
     Private WithEvents btnAggiungiPattern As Button
+
+    ' Funzione per contare le transazioni che matcheranno un pattern
+    Private Function ContaTransazioniPerPattern(parolaPattern As String) As Integer
+        Try
+            Using conn As New SQLiteConnection(DatabaseManager.GetConnectionString())
+                conn.Open()
+                Dim query As String = "
+                SELECT COUNT(*) FROM Transazioni 
+                WHERE (MacroCategoria IS NULL OR MacroCategoria = '') 
+                AND UPPER(Descrizione) LIKE @pattern"
+                Using cmd As New SQLiteCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@pattern", $"%{parolaPattern.ToUpper()}%")
+                    Return Convert.ToInt32(cmd.ExecuteScalar())
+                End Using
+            End Using
+        Catch ex As Exception
+            MessageBox.Show($"Errore nel conteggio transazioni: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return 0
+        End Try
+    End Function
+
+    ' Funzione per classificare tutte le transazioni usando il nuovo pattern
+    Private Function ClassificaTransazioniConNuovoPattern() As Integer
+        Try
+            ' Usa il classificatore migliorato per applicare tutti i pattern esistenti
+            Return ClassificatoreTransazioniMigliorato.ClassificaTutteLeTransazioniMigliorate()
+        Catch ex As Exception
+            MessageBox.Show($"Errore durante la classificazione: {ex.Message}", "Errore", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return 0
+        End Try
+    End Function
+
+    ' Mostra il risultato della ricerca pattern con interfaccia avanzata
+    Private Sub MostraRisultatoPatternAvanzato(risultato As GptClassificatoreTransazioni.RisultatoPatternSimili)
+        ' Costruisci messaggio dettagliato
+        Dim sb As New Text.StringBuilder()
+        
+        ' Analisi AI
+        If Not String.IsNullOrWhiteSpace(risultato.Analisi) Then
+            sb.AppendLine("🧠 ANALISI AI:")
+            sb.AppendLine(risultato.Analisi)
+            sb.AppendLine()
+        End If
+        
+        ' Pattern suggeriti
+        sb.AppendLine("🔍 PATTERN SIMILI TROVATI:")
+        sb.AppendLine()
+        
+        For i = 0 To Math.Min(risultato.PatternSuggeriti.Count - 1, 4) ' Max 5 pattern
+            Dim p = risultato.PatternSuggeriti(i)
+            sb.AppendLine($"{i + 1}) 📝 {p.Parola}")
+            sb.AppendLine($"   📊 Confidenza: {p.Confidenza}%")
+            sb.AppendLine($"   🎯 Categoria: {p.MacroCategoria}/{p.Categoria}")
+            sb.AppendLine($"   📈 Transazioni potenziali: {p.TransazioniPotenziali}")
+            sb.AppendLine($"   💡 Motivo: {p.Motivazione}")
+            sb.AppendLine()
+        Next
+        
+        sb.AppendLine("Scegli un'opzione:")
+        sb.AppendLine("• SÌ = Applica il primo suggerimento")
+        sb.AppendLine("• NO = Seleziona manualmente")
+        sb.AppendLine("• ANNULLA = Torna indietro")
+        
+        ' Mostra dialog
+        Dim res = MessageBox.Show(sb.ToString(), "🤖 Pattern Simili - Analisi AI Avanzata", 
+                                MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information)
+        
+        Select Case res
+            Case DialogResult.Yes
+                ' Applica primo suggerimento
+                ApplicaPatternSuggerito(risultato.PatternSuggeriti(0))
+                lblAIStatus.Text = "✅ Pattern AI applicato automaticamente"
+                lblAIStatus.ForeColor = Color.DarkGreen
+                
+            Case DialogResult.No
+                ' Selezione manuale con InputBox migliorato
+                Dim scelta = InputBox($"Digita il numero del pattern da applicare (1-{risultato.PatternSuggeriti.Count}):", 
+                                    "Seleziona Pattern", "1")
+                Dim idx As Integer
+                If Integer.TryParse(scelta, idx) AndAlso idx >= 1 AndAlso idx <= risultato.PatternSuggeriti.Count Then
+                    ApplicaPatternSuggerito(risultato.PatternSuggeriti(idx - 1))
+                    lblAIStatus.Text = $"✅ Pattern #{idx} applicato manualmente"
+                    lblAIStatus.ForeColor = Color.DarkGreen
+                Else
+                    lblAIStatus.Text = "❌ Selezione non valida"
+                    lblAIStatus.ForeColor = Color.DarkOrange
+                End If
+                
+            Case Else
+                lblAIStatus.Text = "⏸️ Operazione annullata"
+                lblAIStatus.ForeColor = Color.Gray
+        End Select
+    End Sub
+
+    ' Applica un pattern suggerito ai campi del form
+    Private Sub ApplicaPatternSuggerito(suggerimento As GptClassificatoreTransazioni.SuggerimentoPatternAvanzato)
+        txtParola.Text = suggerimento.Parola
+        
+        If Not String.IsNullOrWhiteSpace(suggerimento.MacroCategoria) Then
+            txtMacroCategoria.Text = suggerimento.MacroCategoria
+        End If
+        
+        If Not String.IsNullOrWhiteSpace(suggerimento.Categoria) Then
+            txtCategoria.Text = suggerimento.Categoria
+        End If
+        
+        ' Prova a selezionare la combinazione corrispondente
+        SelezionaCombinazionePiùVicina(suggerimento.MacroCategoria, suggerimento.Categoria)
+    End Sub
 End Class

@@ -1,4 +1,5 @@
-﻿Public Class Transazione
+Namespace Models
+    Public Class Transazione
     Public Property ID As Integer
     Public Property Data As Date
     Public Property Importo As Decimal
@@ -34,4 +35,5 @@
         Me.Importo = importo
         Me.Data = data
     End Sub
-End Class
+    End Class
+End Namespace

@@ -1,6 +1,7 @@
-﻿Imports System.Data.SQLite
+Imports System.Data.SQLite
 Imports System.Text.RegularExpressions
 Imports Microsoft.VisualBasic.Strings
+Imports GestioneFinanzePersonali.Models
 
 Public Class ClassificatoreTransazioniMigliorato
 

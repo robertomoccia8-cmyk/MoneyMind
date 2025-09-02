@@ -16,14 +16,14 @@
         rbSet1.Text = set1.NomeCompleto
         lblInfoSet1.Text = $"Pattern: {set1.NumeroPattern}" & vbCrLf &
                           $"Transazioni: {set1.NumeroTransazioni}" & vbCrLf &
-                          $"Ultimo utilizzo: {If(set1.UltimoUtilizzo.HasValue, set1.UltimoUtilizzo.Value.ToString("dd/MM/yyyy"), "Mai")}" & vbCrLf &
+                          $"Ultimo utilizzo: {If(set1.UltimoUtilizzo = Date.MinValue, "Mai", set1.UltimoUtilizzo.ToString("dd/MM/yyyy"))}" & vbCrLf &
                           $"Parole: {String.Join(", ", set1.Parole.Take(5))}{If(set1.Parole.Count > 5, "...", "")}"
 
         ' Imposta informazioni Set 2
         rbSet2.Text = set2.NomeCompleto
         lblInfoSet2.Text = $"Pattern: {set2.NumeroPattern}" & vbCrLf &
                           $"Transazioni: {set2.NumeroTransazioni}" & vbCrLf &
-                          $"Ultimo utilizzo: {If(set2.UltimoUtilizzo.HasValue, set2.UltimoUtilizzo.Value.ToString("dd/MM/yyyy"), "Mai")}" & vbCrLf &
+                          $"Ultimo utilizzo: {If(set2.UltimoUtilizzo = Date.MinValue, "Mai", set2.UltimoUtilizzo.ToString("dd/MM/yyyy"))}" & vbCrLf &
                           $"Parole: {String.Join(", ", set2.Parole.Take(5))}{If(set2.Parole.Count > 5, "...", "")}"
 
         ' Seleziona automaticamente il set con più transazioni

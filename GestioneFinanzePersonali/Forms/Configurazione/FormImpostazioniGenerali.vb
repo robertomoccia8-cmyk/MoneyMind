@@ -16,6 +16,7 @@ Public Class FormImpostazioniGenerali ' Rinominato da FormConfigurazioneStipendi
     ' Controlli per API
     Private txtOpenAiKey As TextBox
     Private txtGooglePlacesKey As TextBox
+    Private txtClaudeKey As TextBox
     Private btnTestOpenAi As Button
     Private btnTestGooglePlaces As Button
     Private lblOpenAiStatus As Label
@@ -497,6 +498,10 @@ Public Class FormImpostazioniGenerali ' Rinominato da FormConfigurazioneStipendi
             If Not String.IsNullOrWhiteSpace(txtGooglePlacesKey.Text) Then
                 GestoreApiKeys.SalvaChiaveApi("GooglePlaces", txtGooglePlacesKey.Text)
             End If
+
+            'If Not String.IsNullOrWhiteSpace(txtGooglePlacesKey.Text) Then
+            'GestoreApiKeys.SalvaChiaveApi("Claude", txtClaudeKey.Text)
+            'End If
 
             MessageBox.Show("Tutte le impostazioni sono state salvate con successo!", "Successo", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.DialogResult = DialogResult.OK

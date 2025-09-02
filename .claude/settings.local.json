@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(rm:*)",
+      "Bash(msbuild:*)",
+      "Bash(dotnet build:*)",
+      "Bash(\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\devenv.exe\" GestioneFinanzePersonaliGestioneFinanzePersonali.vbproj /build Debug)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

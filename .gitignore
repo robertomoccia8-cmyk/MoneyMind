@@ -67,3 +67,11 @@ TestResults/
 
 # Publish artifacts
 publish/
+
+# API KEY
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.production.local
+!.env.example
